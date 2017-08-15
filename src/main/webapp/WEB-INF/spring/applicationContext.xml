@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- 第一种方式：加载一个properties文件 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="WEB-INF/properties/jdbc.properties" />
+	</bean>
+
+
+	<!-- 第二种方式：加载多个properties文件 -->
+	<!--<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"> 
+		<property name="locations"> <list> <value>classpath:com/resources/properties/jdbc.properties</value> 
+		<value>classpath:com/resources/properties/config.properties</value> </list> 
+		</property> <property name="fileEncoding" value="UTF-8"/> </bean> <bean id="propertyConfigurer" 
+		class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"> 
+		<property name="properties" ref="configProperties"/> </bean> -->
+
+	<!-- ======================= DataSource ======================= -->
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
+		destroy-method="close">
+		<!-- Connection Info -->
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<!-- Connection Pooling Info -->
+		<property name="maxActive" value="${jdbc.pool.maxActive}" />
+		<property name="maxIdle" value="${jdbc.pool.maxIdle}" />
+		<property name="minIdle" value="0" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+
+	<!--配置sqlSessionFactory 并将数据源注入 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!--注入数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 指定Mybatis Mapper映射文件 -->
+		<property name="mapperLocations" value="classpath:/com/flowingsand/dao/*Mapper.xml" />
+		<!-- 指定mybatis配置文件 -->
+		<property name="configLocation"
+			value="classpath:/com/resources/config/mybatis-config.xml" />
+	</bean>
+	<!-- 创建数据映射器 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.flowingsand.dao" />
+	</bean>
+	<!-- 对数据源进行事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+</beans>

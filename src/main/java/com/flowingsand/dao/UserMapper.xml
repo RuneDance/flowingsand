@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.flowingsand.dao.IUserDao">
+	<!-- 用户登录 -->
+	<select id="selectByNameAndPassword" parameterType="java.lang.String"
+		resultType="account">
+		select acc.uname ,acc.pwd from Accounts acc where acc.uname
+		= #{uname} and acc.pwd=#{pwd}
+	</select>
+	<!-- 根据用户名进行查询 -->
+	<select id="selectByName" parameterType="java.lang.String"
+		resultType="account">
+		select acc.uname from Accounts acc where acc.uname =
+		#{uname}
+	</select>
+
+	<!-- 根据用户名进行查询Id -->
+	<select id="selectIdByName" parameterType="java.lang.String"
+		resultType="Integer">
+		select acc.id from Accounts acc where acc.uname = #{uname}
+	</select>
+
+	<!-- 根据邮箱进行查询 -->
+	<select id="selectByEmail" parameterType="java.lang.String"
+		resultType="account">
+		select acc.email from Accounts acc where acc.email =
+		#{email}
+	</select>
+
+	<!-- 用户注册 -->
+	<insert id="insertAccounts" parameterType="account">
+		insert into Accounts
+		(lid,nname,uname,pwd,email)
+		values
+		(#{accounts.lid},#{accounts.nname},#{accounts.uname},#{accounts.pwd},#{accounts.email})
+	</insert>
+	<!-- 用户更新密码 -->
+	<update id="modifyPassword" parameterType="java.lang.String">
+		update Accounts acc
+		set acc.pwd = #{pwd} where acc.email = #{email}
+	</update>
+
+</mapper>

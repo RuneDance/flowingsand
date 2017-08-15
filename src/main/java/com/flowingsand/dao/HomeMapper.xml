@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.flowingsand.dao.IHomeDao">
+
+	<!-- 查询所有用户内容的总数 -->
+	<select id="selectAllCount" resultType="Integer">
+		select count(*) from
+		Article art order by art.aid
+	</select>
+	<!-- 查询所有所有内容并分页 -->
+	<select id="selectAllArticlesByPage" resultType="article">
+		select
+		art.aid,art.title,art.author,art.atime,art.link,art.acontents from
+		Article art
+		order by art.aid limit #{startPos},#{pageSize};
+	</select>
+	<!-- 查询当前登录用户内容的总数 -->
+	<select id="selectCountByAuthor" parameterType="java.lang.String"
+		resultType="Integer">
+		select count(*) from Article art where art.author=#{name}
+		order by art.author
+	</select>
+
+	<!-- 查询当前登录用户内容并分页" -->
+	<select id="selectArticlesByPage" resultType="article">
+		select
+		art.aid,art.title,art.author,art.atime,art.link,art.acontents from
+		Article art
+		where art.author=#{name} limit
+		#{startPos},#{pageSize}
+	</select>
+
+	<!-- 用户发布内容 -->
+	<insert id="insertArticle" parameterType="article">
+		insert into
+		Article
+		(aid,title,author,atime,link,acontents) values
+		(#{article.aid},#{article.title},#{article.author},#{article.atime},#{article.link},#{article.acontents})
+	</insert>
+	<!-- 根据id查询内容 -->
+	<select id="selectArticlesById" parameterType="java.lang.Integer"
+		resultType="article">
+		select
+		art.title,art.author,art.atime,art.link,art.acontents from Article art
+		where art.aid = #{aid};
+	</select>
+	<!-- 根据用户名进行信息查询 -->
+	<select id="selectMessagesByUser" parameterType="java.lang.String"
+		resultType="message">
+		select mes.mid,mes.mname,mes.mtime,mes.messages from message mes where mes.mname=#{name} order by mes.mid;
+	</select>
+	 <!-- 根据Id删除消息 -->
+	<delete id="deleteMessagesById" parameterType="java.lang.Integer">
+		delete from message where mid=#{id};
+	</delete>
+	<!-- 根据Id进行消息查询 -->
+	<select id="selectMessagesById" parameterType="java.lang.Integer"
+		resultType="message">
+		select mes.mid,mes.mname,mes.mtime,mes.messages from message mes where mes.mid=#{id} order by mes.mid;
+	</select>
+</mapper>

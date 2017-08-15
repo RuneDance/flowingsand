@@ -1,0 +1,276 @@
+body {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+/*======================================�����Ļ�ֱ�������=====================================================*/
+@media screen and (min-width: 1900px) {
+    .margin {
+        width: 1902px;
+        /* border: 2px solid red; */
+    }
+
+    .explain {
+        position: absolute;
+        top: 140px;
+        left: 580px;
+    }
+
+    .register {
+        position: absolute;
+        top: -15px;
+        left: 1810px;
+    }
+
+    .explain ul li {
+        font-size: 17px;
+        color: blue;
+    }
+
+    .explain ul li:hover {
+        color: red;
+    }
+
+    .explain h1 {
+        color: #fff;
+        font-size: 60px;
+        font-weight: 100px;
+        margin: 0px 330px;
+    }
+
+    .explain h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 10px 320px;
+    }
+
+    .viewtable {
+        position: absolute;
+        top: 10px;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    }
+
+    .group-inputs .email-input-wrapper {
+        position: absolute;
+        top: 360px;
+        left: 854px;
+    }
+
+    .group-inputs .email-input-wrapper #accountname {
+        color: black;
+        font-weight: bold;
+    }
+
+    .group-inputs .input-wrapper {
+        position: absolute;
+        top: 420px;
+        left: 854px;
+    }
+
+    .group-inputs .input-wrapper #password {
+        font-weight: bold;
+    }
+
+    .input-wrapper-captcha-module #captcha {
+        position: absolute;
+        top: 480px;
+        left: 854px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .input-wrapper-captcha-module .captcha-container {
+        position: absolute;
+        top: 482px;
+        left: 978px;
+    }
+
+    .button-wrapper-command .sign-button-submit {
+        position: absolute;
+        top: 540px;
+        left: 854px;
+        display: block;
+        padding: 0;
+        width: 245px;
+        height: 37px;
+        font-size: 18px;
+        line-height: 33px;
+        color: white;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+        background: blue;
+        background: -webkit-linear-gradient(top, #80c3f7, #6bbaf8);
+        background: linear-gradient(to bottom, #80c3f7, #6bbaf8);
+        border: 1px solid #1D80CF;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 1px 1px rgba(50, 50, 50, .05);
+        outline: 0;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .signin-misc-wrapper-clearfix {
+        position: absolute;
+        top: 600px;
+        left: 854px;
+        font-size: 19px;
+        font-weight: normal;
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    }
+
+    .signin-misc-wrapper-clearfix .remember-me .unable-login {
+        color: #F00;
+        position: relative;
+        left: 60px;
+    }
+
+    .signin-misc-wrapper-clearfix .remember-me .unable-login:hover {
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1899px) {
+    .margin {
+        width: 1347px;
+        /* border: 2px solid green; */
+    }
+
+    .explain {
+        position: absolute;
+        top: 140px;
+        left: 570px;
+    }
+
+    .register {
+        position: absolute;
+        top: -15px;
+        left: 1210px;
+    }
+
+    .explain ul li {
+        font-size: 17px;
+        color: blue;
+    }
+
+    .explain ul li:hover {
+        color: red;
+    }
+
+    .explain h1 {
+        color: #fff;
+        font-size: 60px;
+        font-weight: 100px;
+        margin: 0px 33px;
+    }
+
+    .explain h2 {
+        font-size: 18px;
+        font-weight: normal;
+        margin: 10px 25px;
+    }
+
+    .viewtable {
+        position: absolute;
+        top: 10px;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    }
+
+    .group-inputs .email-input-wrapper {
+        position: absolute;
+        top: 360px;
+        left: 554px;
+    }
+
+    .group-inputs .email-input-wrapper #accountname {
+        color: black;
+        font-weight: bold;
+    }
+
+    .group-inputs .input-wrapper {
+        position: absolute;
+        top: 420px;
+        left: 554px;
+    }
+
+    .group-inputs .input-wrapper #password {
+        font-weight: bold;
+    }
+
+    .input-wrapper-captcha-module #captcha {
+        position: absolute;
+        top: 480px;
+        left: 554px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .input-wrapper-captcha-module .captcha-container {
+        position: absolute;
+        top: 482px;
+        left: 678px;
+    }
+
+    .button-wrapper-command .sign-button-submit {
+        position: absolute;
+        top: 540px;
+        left: 554px;
+        display: block;
+        padding: 0;
+        width: 245px;
+        height: 37px;
+        font-size: 18px;
+        line-height: 33px;
+        color: white;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+        background: blue;
+        background: -webkit-linear-gradient(top, #80c3f7, #6bbaf8);
+        background: linear-gradient(to bottom, #80c3f7, #6bbaf8);
+        border: 1px solid #1D80CF;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 1px 1px rgba(50, 50, 50, .05);
+        outline: 0;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .signin-misc-wrapper-clearfix {
+        position: absolute;
+        top: 600px;
+        left: 554px;
+        font-size: 19px;
+        font-weight: normal;
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
+        'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    }
+
+    .signin-misc-wrapper-clearfix .remember-me .unable-login {
+        color: #F00;
+        position: relative;
+        left: 60px;
+    }
+
+    .signin-misc-wrapper-clearfix .remember-me .unable-login:hover {
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 479px) {
+}
+
+/*========================================================================================================*/

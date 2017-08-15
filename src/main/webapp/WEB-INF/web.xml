@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0"
+	version="3.0">
+
+
+
+
+	<!-- ============================= Spring config context ============================= -->
+	<!-- applicationContext.xml配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/applicationContext.xml</param-value>
+	</context-param>
+	<!-- log4j.properties配置文件 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/properties/log4j.properties</param-value>
+	</context-param>
+
+
+
+	<!-- ============================= listener ============================= -->
+	<!-- spring框架必须定义ContextLoaderListener，在启动Web容器时，自动装配Spring applicationContext.xml的配置信息 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+
+
+
+	<!-- ============================= servlet 配置============================= -->
+	<!-- <servlet> <servlet-name>index</servlet-name> <servlet-class>com.flowingsand.servlet.InitServlet</servlet-class> 
+		</servlet> -->
+	<servlet>
+		<servlet-name>spring-mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<!-- 指定Spring-mvc配置文件 -->
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- ============================= servlet 映射 ============================= -->
+	<!-- <servlet-mapping> <servlet-name>index</servlet-name> <url-pattern>/index</url-pattern> 
+		</servlet-mapping> -->
+	<servlet-mapping>
+		<!-- 指定请求的后缀，可以随意写，这里用.html作为请求后缀 -->
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ============================= 过滤器 ============================= -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<!-- 编码格式为UTF-8 -->
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<!-- ============================= 过滤器 映射 ============================= -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>XssFilter</filter-name>
+		<filter-class>com.flowingsand.utils.XssFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>XssFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<!-- ============================= 配置默认跳转不带有www ============================= -->
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<!-- ============================= index 欢迎页面 ============================= -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- ============================= 出错-页面配置 ============================= -->
+	<!--<error-page> <error-code>404</error-code> <location>/WEB-INF/jsp/error404.jsp</location> 
+		</error-page> -->
+	<!--<error-page> <error-code>500</error-code> <location>/global/error500.jsp</location> 
+		</error-page> <error-page> <exception-type>java.lang.Exception</exception-type> 
+		<location>/global/exception.jsp</location> </error-page> -->
+
+
+</web-app>

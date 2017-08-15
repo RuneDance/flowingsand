@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+#fslogo{
+	height:25px;
+    width: auto;
+}
+
+body{
+	background: #ebebeb;
+	color: #000;
+}
+
+
+
+/**======================================================*/
+
+.post {
+    padding: 35px;
+    background: #ffffff;
+}
+
+.post .post-footer {
+    margin-top: 30px;
+    border-top: 1px solid #ebebeb;
+    padding: 21px 0 0;
+}
+.post .post-head {
+    text-align: center;
+}
+
+.post .post-head .post-title {
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    color: #000;
+}
+
+.post .post-head .post-meta {
+    color: #959595;
+    margin: 14px 0px;
+}
+
+.post .post-head .post-date{
+	font-size: 11.5px;
+}
+
+.post-content p {
+	color: #2f2f2f;
+    font-size: 15px;
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    word-break: break-word;
+    text-indent: 2em;
+    margin-top: 0;
+    margin-bottom: 1.46em;
+}
+
+
+/* ::selection {
+	color: #ffffff;
+	background: #f4645f;
+	text-shadow: none;
+} */

@@ -1,0 +1,119 @@
+.leftbody { /* border: 1px solid red; 7e7e7e*/
+    float: left;
+    width: 4%;
+    height: 100%;
+}
+
+.nav-vertical-left {
+    margin: 0;
+    height: 100%;
+    width: 176.1px;
+    overflow: hidden;
+}
+
+.nav-vertical-left ul.navbar-nav {
+    padding: 0px;
+    width: 100%;
+    height: 50%;
+    display: table;
+    margin: 0;
+}
+
+.nav-vertical-left ul.navbar-nav:before, .nav-vertical-left ul.navbar-nav:after {
+    display: none;
+}
+
+.nav-vertical-left ul.navbar-nav > li {
+    display: table-row;
+}
+
+.nav-vertical-left ul.navbar-nav > li > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-vertical-left ul.navbar-nav li a img {
+    width: 13%;
+    height: auto;
+}
+
+.nav-vertical-left ul.navbar-nav li a span {
+    vertical-align: 6px;
+}
+
+.nav-vertical-left ul.navbar-nav > li > a > i.fa {
+    margin: 0px 26px;
+}
+
+.leftbody .time-date {
+    position: relative;
+    bottom: 8%;
+    float: left;
+    /* border: 1px solid red; */
+}
+
+.leftbody .time-date ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.leftbody .time-date ul li {
+    color: #fff;
+    padding: 5px 0px;
+    list-style: none;
+}
+
+.leftbody .time-date ul li#time {
+    padding-left: 15px;
+}
+
+.leftbody .time-date ul li#date {
+    padding-left: 7px;
+}
+
+/* Colors */
+
+.nav-vertical-left {
+    background-color: #2a2a2a;
+}
+
+.nav-vertical-left ul.navbar-nav > li > a:hover,
+.nav-vertical-left ul.navbar-nav > li > a:active {
+    background: #C0C0C0;
+}
+
+/* Animation */
+
+.nav-vertical-left {
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    transform: translateX(-100px);
+}
+
+.nav-vertical-left:hover {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.nav-vertical-left ul.navbar-nav {
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    transform: translateX(100px);
+}
+
+.nav-vertical-left:hover ul.navbar-nav {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}

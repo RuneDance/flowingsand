@@ -1,0 +1,642 @@
+@CHARSET "UTF-8";
+
+#home {
+	color:#606060;
+	border-bottom: 3.5px solid #222;
+	margin-bottom: 1.3px;
+}
+
+#log {
+	color:#606060;
+	border-bottom: 3.5px solid #222;
+	margin-bottom: 1.3px;
+}
+
+#reg {
+	color:#606060;
+	border-bottom: 3.5px solid #222;
+	margin-bottom: 1.3px;
+}
+
+#home:hover{
+	cursor:pointer;
+	color:#FFFFFF;
+	border-bottom: 3.5px solid #FFFFFF;
+	transition: 1250ms ease all;
+}
+
+#log:hover{
+	cursor:pointer;
+	color:#FFFFFF;
+	border-bottom: 3.5px solid #FFFFFF;
+	transition: 1250ms ease all;
+}
+
+#reg:hover{
+	cursor:pointer;
+	color:#FFFFFF;
+	border-bottom: 3.5px solid #FFFFFF;
+	transition: 1250ms ease all;
+}
+
+#fslogo{
+	height:25px;
+    width: auto;
+}
+
+/*==========================start切換的标题====================================*/
+section {
+    padding: 200px 0;
+}
+#bgi{
+    background-color: #E65F48;
+    -webkit-animation: master-container-bg 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+    animation: master-container-bg 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+#bgi date{
+	/* color: #D5D6E2; */
+	color: #000;
+    font-weight: 500;
+    font-size: 1.3em;
+    font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+    padding:2.5px;
+    border: 1.9px double #fff;
+    border-radius:5.7px;
+    background-color: silver;
+}
+
+#welcome{
+      margin: 60px auto;
+	  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      line-height: 1;
+      font-weight: bold;
+      letter-spacing: 0;
+      -webkit-font-smoothing: inherit
+}
+#master-container-scroller {
+      height: 66px;
+      margin-bottom: -6px;
+      overflow: hidden;
+      position: relative
+  }
+
+  #master-container-scroller .master-container-scroller_item {
+      display: block;
+      padding-bottom: 6px;
+      -webkit-animation: scroll 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+      animation: scroll 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+  }
+	
+  #master-container-scroller .master-container-scroller_item a:HOVER{
+  	text-decoration: none;
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(1),
+  #master-container-scroller .master-container-scroller_item:nth-child(1) a {
+      color: #000
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(2),
+  #master-container-scroller .master-container-scroller_item:nth-child(2) a {
+      color: #E65F48
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(3),
+  #master-container-scroller .master-container-scroller_item:nth-child(3) a {
+      color: #76BCAD
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(4),
+  #master-container-scroller .master-container-scroller_item:nth-child(4) a {
+      color: #FF2400
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(5),
+  #master-container-scroller .master-container-scroller_item:nth-child(5) a {
+      color: #d47787
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(6),
+  #master-container-scroller .master-container-scroller_item:nth-child(6) a {
+      color: yellow
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(7),
+  #master-container-scroller .master-container-scroller_item:nth-child(7) a {
+      color: #349AB5
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(8),
+  #master-container-scroller .master-container-scroller_item:nth-child(8) a {
+      color: #e86042
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(9),
+  #master-container-scroller .master-container-scroller_item:nth-child(9) a {
+      color: #74bcae
+  }
+
+  #master-container-scroller .master-container-scroller_item:nth-child(10),
+  #master-container-scroller .master-container-scroller_item:nth-child(10) a {
+      color: #E65F48
+  }
+
+  @media screen and (max-width: 615px) {
+      #master-container-scroller {
+          height: 48px;
+          font-size: 40px;
+          line-height: 1.2;
+          margin-bottom: 0
+      }
+      #master-container-scroller .master-container-scroller_item {
+          padding-bottom: 0;
+          -webkit-animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+          animation: scroll-mobile 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+      }
+  }
+
+  
+
+  @-webkit-keyframes scroll {
+      0.0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      3.7037037037037037% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      11.11111111111111% {
+          -webkit-transform: translateY(-66px);
+          transform: translateY(-66px)
+      }
+      14.814814814814815% {
+          -webkit-transform: translateY(-66px);
+          transform: translateY(-66px)
+      }
+      22.22222222222222% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      25.925925925925927% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      33.333333333333336% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      37.03703703703704% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      44.44444444444444% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      48.148148148148145% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      55.55555555555556% {
+          -webkit-transform: translateY(-330px);
+          transform: translateY(-330px)
+      }
+      59.25925925925926% {
+          -webkit-transform: translateY(-330px);
+          transform: translateY(-330px)
+      }
+      66.66666666666667% {
+          -webkit-transform: translateY(-396px);
+          transform: translateY(-396px)
+      }
+      70.37037037037037% {
+          -webkit-transform: translateY(-396px);
+          transform: translateY(-396px)
+      }
+      77.77777777777777% {
+          -webkit-transform: translateY(-462px);
+          transform: translateY(-462px)
+      }
+      81.48148148148148% {
+          -webkit-transform: translateY(-462px);
+          transform: translateY(-462px)
+      }
+      88.88888888888889% {
+          -webkit-transform: translateY(-528px);
+          transform: translateY(-528px)
+      }
+      92.5925925925926% {
+          -webkit-transform: translateY(-528px);
+          transform: translateY(-528px)
+      }
+      100.0% {
+          -webkit-transform: translateY(-594px);
+          transform: translateY(-594px)
+      }
+  }
+
+  @keyframes scroll {
+      0.0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      3.7037037037037037% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      11.11111111111111% {
+          -webkit-transform: translateY(-66px);
+          transform: translateY(-66px)
+      }
+      14.814814814814815% {
+          -webkit-transform: translateY(-66px);
+          transform: translateY(-66px)
+      }
+      22.22222222222222% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      25.925925925925927% {
+          -webkit-transform: translateY(-132px);
+          transform: translateY(-132px)
+      }
+      33.333333333333336% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      37.03703703703704% {
+          -webkit-transform: translateY(-198px);
+          transform: translateY(-198px)
+      }
+      44.44444444444444% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      48.148148148148145% {
+          -webkit-transform: translateY(-264px);
+          transform: translateY(-264px)
+      }
+      55.55555555555556% {
+          -webkit-transform: translateY(-330px);
+          transform: translateY(-330px)
+      }
+      59.25925925925926% {
+          -webkit-transform: translateY(-330px);
+          transform: translateY(-330px)
+      }
+      66.66666666666667% {
+          -webkit-transform: translateY(-396px);
+          transform: translateY(-396px)
+      }
+      70.37037037037037% {
+          -webkit-transform: translateY(-396px);
+          transform: translateY(-396px)
+      }
+      77.77777777777777% {
+          -webkit-transform: translateY(-462px);
+          transform: translateY(-462px)
+      }
+      81.48148148148148% {
+          -webkit-transform: translateY(-462px);
+          transform: translateY(-462px)
+      }
+      88.88888888888889% {
+          -webkit-transform: translateY(-528px);
+          transform: translateY(-528px)
+      }
+      92.5925925925926% {
+          -webkit-transform: translateY(-528px);
+          transform: translateY(-528px)
+      }
+      100.0% {
+          -webkit-transform: translateY(-594px);
+          transform: translateY(-594px)
+      }
+  }
+
+  @-webkit-keyframes scroll-mobile {
+      0.0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      3.7037037037037037% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      11.11111111111111% {
+          -webkit-transform: translateY(-48px);
+          transform: translateY(-48px)
+      }
+      14.814814814814815% {
+          -webkit-transform: translateY(-48px);
+          transform: translateY(-48px)
+      }
+      22.22222222222222% {
+          -webkit-transform: translateY(-96px);
+          transform: translateY(-96px)
+      }
+      25.925925925925927% {
+          -webkit-transform: translateY(-96px);
+          transform: translateY(-96px)
+      }
+      33.333333333333336% {
+          -webkit-transform: translateY(-144px);
+          transform: translateY(-144px)
+      }
+      37.03703703703704% {
+          -webkit-transform: translateY(-144px);
+          transform: translateY(-144px)
+      }
+      44.44444444444444% {
+          -webkit-transform: translateY(-192px);
+          transform: translateY(-192px)
+      }
+      48.148148148148145% {
+          -webkit-transform: translateY(-192px);
+          transform: translateY(-192px)
+      }
+      55.55555555555556% {
+          -webkit-transform: translateY(-240px);
+          transform: translateY(-240px)
+      }
+      59.25925925925926% {
+          -webkit-transform: translateY(-240px);
+          transform: translateY(-240px)
+      }
+      66.66666666666667% {
+          -webkit-transform: translateY(-288px);
+          transform: translateY(-288px)
+      }
+      70.37037037037037% {
+          -webkit-transform: translateY(-288px);
+          transform: translateY(-288px)
+      }
+      77.77777777777777% {
+          -webkit-transform: translateY(-336px);
+          transform: translateY(-336px)
+      }
+      81.48148148148148% {
+          -webkit-transform: translateY(-336px);
+          transform: translateY(-336px)
+      }
+      88.88888888888889% {
+          -webkit-transform: translateY(-384px);
+          transform: translateY(-384px)
+      }
+      92.5925925925926% {
+          -webkit-transform: translateY(-384px);
+          transform: translateY(-384px)
+      }
+      100.0% {
+          -webkit-transform: translateY(-432px);
+          transform: translateY(-432px)
+      }
+  }
+
+  @keyframes scroll-mobile {
+      0.0% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      3.7037037037037037% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px)
+      }
+      11.11111111111111% {
+          -webkit-transform: translateY(-48px);
+          transform: translateY(-48px)
+      }
+      14.814814814814815% {
+          -webkit-transform: translateY(-48px);
+          transform: translateY(-48px)
+      }
+      22.22222222222222% {
+          -webkit-transform: translateY(-96px);
+          transform: translateY(-96px)
+      }
+      25.925925925925927% {
+          -webkit-transform: translateY(-96px);
+          transform: translateY(-96px)
+      }
+      33.333333333333336% {
+          -webkit-transform: translateY(-144px);
+          transform: translateY(-144px)
+      }
+      37.03703703703704% {
+          -webkit-transform: translateY(-144px);
+          transform: translateY(-144px)
+      }
+      44.44444444444444% {
+          -webkit-transform: translateY(-192px);
+          transform: translateY(-192px)
+      }
+      48.148148148148145% {
+          -webkit-transform: translateY(-192px);
+          transform: translateY(-192px)
+      }
+      55.55555555555556% {
+          -webkit-transform: translateY(-240px);
+          transform: translateY(-240px)
+      }
+      59.25925925925926% {
+          -webkit-transform: translateY(-240px);
+          transform: translateY(-240px)
+      }
+      66.66666666666667% {
+          -webkit-transform: translateY(-288px);
+          transform: translateY(-288px)
+      }
+      70.37037037037037% {
+          -webkit-transform: translateY(-288px);
+          transform: translateY(-288px)
+      }
+      77.77777777777777% {
+          -webkit-transform: translateY(-336px);
+          transform: translateY(-336px)
+      }
+      81.48148148148148% {
+          -webkit-transform: translateY(-336px);
+          transform: translateY(-336px)
+      }
+      88.88888888888889% {
+          -webkit-transform: translateY(-384px);
+          transform: translateY(-384px)
+      }
+      92.5925925925926% {
+          -webkit-transform: translateY(-384px);
+          transform: translateY(-384px)
+      }
+      100.0% {
+          -webkit-transform: translateY(-432px);
+          transform: translateY(-432px)
+      }
+  }
+  @keyframes master-container-bg {
+      0.0% {
+          background-color: #F5C59C
+      }
+      3.7037037037037037% {
+          background-color: #F5C59C
+      }
+      11.11111111111111% {
+          background-color: #ECC9CB
+      }
+      14.814814814814815% {
+          background-color: #ECC9CB
+      }
+      22.22222222222222% {
+          background-color: #D9E2CB
+      }
+      25.925925925925927% {
+          background-color: #D9E2CB
+      }
+      33.333333333333336% {
+          background-color: #f6c599
+      }
+      37.03703703703704% {
+          background-color: #f6c599
+      }
+      44.44444444444444% {
+          background-color: #c4bbd3
+      }
+      48.148148148148145% {
+          background-color: #c4bbd3
+      }
+      55.55555555555556% {
+          background-color: #F9E7AF
+      }
+      59.25925925925926% {
+          background-color: #F9E7AF
+      }
+      66.66666666666667% {
+          background-color: #B4E2EE
+      }
+      70.37037037037037% {
+          background-color: #B4E2EE
+      }
+      77.77777777777777% {
+          background-color: #cbe5f4
+      }
+      81.48148148148148% {
+          background-color: #cbe5f4
+      }
+      88.88888888888889% {
+          background-color: #d2e7e2
+      }
+      92.5925925925926% {
+          background-color: #d2e7e2
+      }
+      100.0% {
+          background-color: #F5C59C
+      }
+  }
+  @-webkit-keyframes master-container-bg {
+      0.0% {
+          background-color: #F5C59C
+      }
+      3.7037037037037037% {
+          background-color: #F5C59C
+      }
+      11.11111111111111% {
+          background-color: #ECC9CB
+      }
+      14.814814814814815% {
+          background-color: #ECC9CB
+      }
+      22.22222222222222% {
+          background-color: #D9E2CB
+      }
+      25.925925925925927% {
+          background-color: #D9E2CB
+      }
+      33.333333333333336% {
+          background-color: #f6c599
+      }
+      37.03703703703704% {
+          background-color: #f6c599
+      }
+      44.44444444444444% {
+          background-color: #c4bbd3
+      }
+      48.148148148148145% {
+          background-color: #c4bbd3
+      }
+      55.55555555555556% {
+          background-color: #F9E7AF
+      }
+      59.25925925925926% {
+          background-color: #F9E7AF
+      }
+      66.66666666666667% {
+          background-color: #B4E2EE
+      }
+      70.37037037037037% {
+          background-color: #B4E2EE
+      }
+      77.77777777777777% {
+          background-color: #cbe5f4
+      }
+      81.48148148148148% {
+          background-color: #cbe5f4
+      }
+      88.88888888888889% {
+          background-color: #d2e7e2
+      }
+      92.5925925925926% {
+          background-color: #d2e7e2
+      }
+      100.0% {
+          background-color: #F5C59C
+      }
+  }
+/*==========================end切換的标题====================================*/
+
+.big-text-center {
+	font-size: 150%;
+	text-align: center;
+}
+
+.small-text-center {
+	color: #99aac2;
+	font-size: 60%;
+	text-align: center;
+}
+
+#fspic {
+	padding: 0 3% 0 3%;
+}
+
+
+
+
+.foot-wrap {
+    background-color: #2b3b4d;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.row-content > h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 40px 0 30px 53px;
+}
+
+.row-content > ul li {
+    list-style-type: none;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.row-content > ul li > a {
+    color: #878B91;
+
+	&: hover {
+	    text-decoration: none;
+	    color: #c1ba62;
+	}
+
+}

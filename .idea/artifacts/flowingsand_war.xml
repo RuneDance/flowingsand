@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="flowingsand:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="flowingsand.war">
+      <element id="artifact" artifact-name="flowingsand:war exploded" />
+    </root>
+  </artifact>
+</component>
