@@ -6,8 +6,7 @@
 }
 
 body {
-    background: #323232;
-    /* background-image: url("images/temporary.jpg"); */
+    background:#323232 url("../img/background-img.png") no-repeat;
     overflow: hidden;
     color: #fff;
     font-style: Arial, Helvetica, sans-serif, "微软雅黑", "黑体";
