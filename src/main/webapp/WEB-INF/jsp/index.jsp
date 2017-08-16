@@ -386,7 +386,7 @@
 	        <div class="row-content col-lg-2 col-sm-4 col-xs-6">
 	            <h3>关于</h3>
 	            <ul>
-	                <li><a href="#">关于我们</a></li>
+	                <li><a href="about.html">关于我们</a></li>
 	                <li><a href="#">合作伙伴</a></li>
 	                <li><a href="#">加入我们</a></li>
 	            </ul>
