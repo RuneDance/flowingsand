@@ -15,8 +15,13 @@ body {
 	width: auto;
 }
 
+.nav_bar{
+	margin-bottom: 4.8px;
+}
+
 #drop-down-menu {
-	margin-top: 1.1%;
+	/* margin-top: 1.1%; */
+	padding-top: 15px;
 }
 
 #drop-down-menu a i {
