@@ -43,6 +43,8 @@ $(document).ready(function() {
     		$("#bs-dropdownmenu").children().eq(0).after(html1);
     		$("#drop-down-menu ul").children().eq(1).after(html2);
     	}
+    	$("#c_mes a").attr('href','message.html');
+    	$("#p_set a").attr('href','setting.html');
     }else{
     	$("#u_name").html("<a href='user.html'><span><strong style='color:#FF0000'>请登录！</strong></span></a>");
     	var centerVal=$("#c_mes").eq(0).attr('class');
@@ -59,13 +61,15 @@ $(document).ready(function() {
     	$("#drop-down-menu").remove();
     	if(sessionId !=""){
 		   $("#user_name").html("<a href='#'><span class='glyphicon glyphicon-user btn-xs'> <strong style='color:#0000FF;font-size: 15.5px;'>"+sessionId+"</strong></span></a>");
+		   $("#per_set a").attr('href','setting.html');
+		   $("#mes_center a").attr('href','message.html');
 		}else{
 		   $("#user_name").html("<a href='user.html'><span class='glyphicon glyphicon-user btn-xs'> <strong style='color:red'>请登录！</strong></span></a>");
 		   var centerVal=$("#mes_center").eq(0).attr('class');
 	       var setVal=$("#per_set").eq(0).attr('class');
 	       if((centerVal.substring(centerVal.length)) =="" ||(setVal.substring(setVal.length)) ==""){
-	    	   $("#mes_center").attr('class',centerVal+" "+"disabled");
 	    	   $("#per_set").attr('class',setVal+" "+"disabled");
+	    	   $("#mes_center").attr('class',centerVal+" "+"disabled");
 	       }
 		}
 	});

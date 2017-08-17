@@ -11,7 +11,8 @@
 }
 
 body{
-	background: #ebebeb;
+	/* background: #ebebeb; */
+	background:#323232 url("../img/personal_center.png") no-repeat;
 }
 
 #title{

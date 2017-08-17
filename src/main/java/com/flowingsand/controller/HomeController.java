@@ -177,7 +177,7 @@ public class HomeController extends BaseController {
 	public String showMessage(HttpServletRequest request){
 		HttpSession session = request.getSession();
 		String name=(String) session.getAttribute("sname");
-		if(name !=""){
+		if(name !=null){
 			List<Message> messages=homeService.showMessages(name);
 			if(messages !=null){
 				for (Message list : messages) {
@@ -193,6 +193,7 @@ public class HomeController extends BaseController {
 			}
 		}else{
 			request.setAttribute("messages", "暂无消息。");
+			return "user";
 		}
 		return "message";
 	}

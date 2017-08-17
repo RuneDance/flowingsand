@@ -67,12 +67,12 @@
 						<li class="page-scroll" id="user_name"></li>
 
 						<li class="page-scroll" id="per_set">
-							<a href='setting.html'>
+							<a href='#'>
 								<span class='glyphicon glyphicon-cog btn-xs'> <strong>个人设置</strong></span>
 							</a>
 						</li>
 						<li class="page-scroll" id="mes_center">
-							<a href='message.html'> 
+							<a href='#'> 
 								<span class='glyphicon glyphicon-comment btn-xs'> <strong>消息中心</strong></span>
 							</a>
 						</li>
@@ -86,20 +86,17 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" id="ddm"> <i
 							class="fa fa-align-justify fa-2x" id="DropdownMenu"></i>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-right" role="menu"
-							aria-labelledby="ddm">
-							<li role="presentation" class="dropdown-header text-center"
-								id="u_name"></li>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ddm">
+							<li role="presentation" class="dropdown-header text-center" id="u_name"></li>
 							<li role="presentation" class="divider"></li>
-
-							<li role="presentation" class="text-center" id="p_set"><a
-								role="menuitem" tabindex="-1" href="setting.html"><strong>个人设置</strong></a>
+							<li role="presentation" class="text-center" id="p_set">
+								<a role="menuitem" tabindex="-1" href="#"><strong>个人设置</strong></a>
 							</li>
-							<li role="presentation" class="text-center" id="c_mes"><a
-								role="menuitem" tabindex="-1" href="message.html"><strong>消息中心</strong></a>
+							<li role="presentation" class="text-center" id="c_mes">
+								<a role="menuitem" tabindex="-1" href="#"><strong>消息中心</strong></a>
 							</li>
-							<li role="presentation" class="text-center exit_set"><a
-								id="exit" role="menuitem" tabindex="-1" href='#'><strong>退出</strong></a>
+							<li role="presentation" class="text-center exit_set">
+								<aid="exit" role="menuitem" tabindex="-1" href='#'><strong>退出</strong></a>
 							</li>
 						</ul>
 					</div>
