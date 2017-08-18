@@ -74,49 +74,31 @@
 		</div>
     </header>
     
-    
-    <section class='section' id="bgi">
-    	<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-			    	<date></date>
-				</div>
-			</div>
-			<div class="row" id="welcome">
-				<div class="col-lg-12 text-center">
-				    <div id='master-container-scroller'>
-	                
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>Welcome to here</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>Maybe</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>You can find</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>What you want</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>Next</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>Flowing </a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>The beautiful page</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>It</a>
-	                </div>
-	                <div class='master-container-scroller_item'>
-	                  <a class='cta-link' href='#'>will be here</a>
-	                </div>
-	                <div class='master-container-scroller_item'>Thank You!</div>
-              </div>
-				</div>
-			</div>
+    <section id="explain">
+		<div class="container">
+			<div class="row text-center">
+                <div class="col-lg-4">
+                    <div class="explains-field-title">
+                    	<span>返璞归真</span>
+                    	<hr/>
+                    	<p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而Layui偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" id="test">
+                    <div class="explains-field-title">
+                    	<span>双面体验</span>
+                    	<hr/>
+                    	<p>拥有双面的不仅是人生，还有Layui。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="explains-field-title">
+                    	<span>星辰大海</span>
+                    	<hr/>
+                    	<p>如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场烈焰燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回，正是Layui不灭的执念。</p>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</section>
     
@@ -126,76 +108,6 @@
 		<p class="small-text-center">支持手机端网页浏览(中英两种语言，随系统自动切换)</p>
 		<img src="indexresource/img/pic.png" alt="simple" class="img-responsive center-block" id="fspic"/>	
 	</section>
-    <!-- Portfolio Grid Section -->
-    <!-- <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Features</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <p>Simple Interface</p>
-                            </div>
-                        </div>
-                        <img src="indexresource/img/portfolio/rest.png" class="img-responsive" alt="">
-                    </a>
-                <p>Simple Interface</p>
-                <ul>
-                	<li>Standard HTML calls</li>
-                	<li>XML or JSON interface</li>
-                	<li>Management dashboard</li>
-                	<li>API for service management</li>
-                </ul>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <p>Easy Templates</p>
-                            </div>
-                        </div>
-                        <img src="indexresource/img/portfolio/word.png" class="img-responsive" alt="">
-                    </a>
-                <p>Easy Templates</p>
-                <ul>
-                	<li>Template formats</li>
-                	<ul>
-                		<li>MS Word, Markdown, HTML, TXT</li>
-                	</ul>
-                	<li>Rich templating language</li>
-                	<li>Support for graphics in template and/or data</li>
-                </ul>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <p>Quick Generation</p>
-                            </div>
-                        </div>
-                        <img src="indexresource/img/portfolio/pdf-download.png" class="img-responsive" alt="">
-                    </a>
-                <p>Flexible Outputs</p>
-                <ul>
-                	<li>Output formats</li>
-                	<ul>
-                		<li>MS Word Docx, PDF, XML/HTML, TXT</li>
-                	</ul>
-                	<li>Email document, download or retain on server</li>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- More Section -->
     <section class="success" id="readmore">

@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="frontstageresource/css/404.css">
 </head>
 <body>
+<h1>404</h1>
 <div class="container">
     <div class="item" id="pink">
         <div class="chewing">

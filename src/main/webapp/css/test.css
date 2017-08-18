@@ -2,99 +2,24 @@
 
 body {
 	color: #000;
-	line-height: 1.75em;
-	background: #ebebeb;
-	position: relative;
-	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
-		"Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI",
-		"Microsoft YaHei", sans-serif;
+	font-family: Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
 }
 
-#logo img {
-	height: 25px;
-	width: auto;
+
+/*=================================*/
+
+
+
+.explains-field-title{
+	margin: 0xp 10px;
+    border: 1px solid #e2e2e2;
+    padding: 14px 12px;
 }
 
-#drop-down-menu {
-	/* margin-top: 2.5%; */
-	padding-top: 2.5%;
+.explains-field-title span{
+	font-size:20px;
 }
-
-#drop-down-menu a i {
-	color: #a9a9a9;
-}
-
-ul#bs-dropdownmenu {
-	visibility: hidden;
-}
-
-#drop-down-menu:HOVER {
-	cursor: pointer;
-}
-
-#ddm i:HOVER {
-	color: #fff;
-	/* box-shadow: rgba(255, 225, 200, 0.8) 0 0 0.8em; */
-}
-
-/*====================================================
-	common styles
-====================================================*/
-h2 {
-	font-size: 2.5em;
-}
-
-a {
-	color: #f4645f;
-	outline: none;
-}
-
-a:hover {
-	color: #f4645f;
-}
-
-a:active, a:focus, a img {
-	outline: none;
-}
-
-.btn {
-	padding: 7px 14px;
-	border-radius: 2px;
-}
-
-.btn-default {
-	border: 1px solid #f4645f;
-	background: #f4645f;
-	color: #ffffff;
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-
-.btn-default:hover {
-	border: 1px solid #303030;
-	background: #303030;
-	color: #ffffff;
-}
-
-.btn-default:focus {
-	outline: none;
-}
-
-.btn-default[disabled] {
-	border: 1px solid #303030;
-	background: #303030;
-	color: #ffffff;
-}
-
-::-moz-selection {
-	color: #ffffff;
-	background: #f4645f;
-	text-shadow: none;
-}
-
-::selection {
-	color: #ffffff;
-	background: #f4645f;
-	text-shadow: none;
+.explains-field-title p{
+	font-size: 14px;
+	line-height: 24px;
 }

@@ -31,7 +31,7 @@
 	href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css"
-	href="frontstageresource/css/home.css">
+	href="css/test.css">
 
 <!-- jquery.min.js -->
 <script type="text/javascript"
@@ -44,84 +44,40 @@
 <!-- freelancer.min.js -->
 <script
 	src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
-<script type="text/javascript" src="frontstageresource/js/home.js"></script>
-<% 
-	String sname="";
-	if(session.getAttribute("sname") != null){
-		sname=request.getSession().getAttribute("sname").toString();
-	}
-%>
+<script type="text/javascript" src="frontstageresource/js/test.js"></script>
+
 </head>
 <body>
-	<input id="sessionId" type="hidden" value="<%=sname%>" />
-	<!-- 导航条 -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<a id="logo" class="navbar-brand" href="index.html"> <img
-					src="indexresource/img/flowingsand.gif" alt="logo" />
-				</a>
-			</div>
-			<div class="col-lg-6">
-				<div class="navbar-header page-scroll">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse"
-					id="bs-example-navbar-collapse-1">
-					<ul id="bs-dropdownmenu" class="nav navbar-nav">
-						<li class="page-scroll" id="user_name"></li>
-
-						<li class="page-scroll" id="per_set">
-							<a href='setting.html'>
-								<span class='glyphicon glyphicon-cog btn-xs'> <strong>个人设置</strong></span>
-							</a>
-						</li>
-						<li class="page-scroll" id="mes_center">
-							<a href='message.html'> 
-								<span class='glyphicon glyphicon-comment btn-xs'> <strong>消息中心</strong></span>
-							</a>
-						</li>
-						<li class="page-scroll exit_set">
-							<a id='exit' href='#'> 
-								<span class='glyphicon glyphicon-off btn-xs'> <strong>退出</strong></span>
-							</a>
-						</li>
-					</ul>
-					<div class="dropdown text-right" id="drop-down-menu">
-						<a class="dropdown-toggle" data-toggle="dropdown" id="ddm"> <i
-							class="fa fa-align-justify fa-2x" id="DropdownMenu"></i>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right" role="menu"
-							aria-labelledby="ddm">
-							<li role="presentation" class="dropdown-header text-center"
-								id="u_name"></li>
-							<li role="presentation" class="divider"></li>
-
-							<li role="presentation" class="text-center" id="p_set"><a
-								role="menuitem" tabindex="-1" href="setting.html"><strong>个人设置</strong></a>
-							</li>
-							<li role="presentation" class="text-center" id="c_mes"><a
-								role="menuitem" tabindex="-1" href="message.html"><strong>消息中心</strong></a>
-							</li>
-							<li role="presentation" class="text-center exit_set"><a
-								id="exit" role="menuitem" tabindex="-1" href='#'><strong>退出</strong></a>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
+	
+	<section style="background-color:#fff">
+		<div class="container">
+			<div class="row text-center">
+                <div class="col-lg-4">
+                    <div class="explains-field-title">
+                    	<span>返璞归真</span>
+                    	<hr/>
+                    	<p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而Layui偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" id="test">
+                    <div class="explains-field-title">
+                    	<span>返璞归真</span>
+                    	<hr/>
+                    	<p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而Layui偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="explains-field-title">
+                    	<span>返璞归真</span>
+                    	<hr/>
+                    	<p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而Layui偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                    </div>
+                </div>
+            </div>
 		</div>
-
-	</div>
-	</nav>
-
+	</section>
+	
+	
+	
 </body>
 </html>

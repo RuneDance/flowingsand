@@ -2,11 +2,18 @@ body {
     background: #3cb464;
 }
 
+body h1{
+	text-align: center;
+	color: #3B445B;
+	font-size: 100px;
+	padding-top: 10%;
+}
+
 .container {
     position: absolute;
     width: 800px;
     height: 400px;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

@@ -47,12 +47,12 @@
 
 	<div class="container">
 		<div class="row nav_bar">
-			<div class="col-lg-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<a id="logo" class="navbar-brand" href="index.html"> 
 					<img src="indexresource/img/flowingsand.gif" alt="logo" />
 				</a>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<div class="navbar-header page-scroll">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span> 
