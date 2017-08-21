@@ -120,7 +120,7 @@
 					${item.title}
 				</h1>
 				<div class="post-meta">
-					<span class="author">作者：<a href="#">${item.author}</a></span>
+					<span class="author">作者：<span class="author-names">${item.author}</span></span>
 					•
 					<time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
 				</div>

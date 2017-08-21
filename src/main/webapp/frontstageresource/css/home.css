@@ -137,6 +137,9 @@ a:active, a:focus, a img {
 	white-space: nowrap;
 }
 
+.post .post-head .post-meta .author-names{
+	color: #33FFFF;
+}
 .post .featured-media {
 	margin-top: 30px;
 	overflow: hidden;
