@@ -216,10 +216,15 @@ a:active, a:focus, a img {
 	color: #28CC9E;
 }
 
+footer .footer-above {
+    background-color: #1f2738;
+}
+
 .foot-wrap {
-	background-color: #2b3b4d;
 	margin-top: 0px;
 	padding-top: 0px;
+	background-color: #1f2738;
+	border-top: 1px solid #2a3345;
 }
 
 .row-content>h3 {
@@ -240,4 +245,13 @@ a:active, a:focus, a img {
 	color: #878B91; &: hover { text-decoration : none;
 	color: #c1ba62;
 }
+
+}
+/*==================================================*/
+.foot {
+    padding: 16px 0;
+	color: #7e8187;
+	font-size: 12px;
+	background: #1f2738;
+	border-top: 1px solid #2a3345;
 }

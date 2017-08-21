@@ -1,7 +1,8 @@
 @CHARSET "UTF-8";
 
-body{
-	font-family: Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+body {
+	font-family: Helvetica Neue, Helvetica, PingFang SC,
+		\5FAE\8F6F\96C5\9ED1, Tahoma, Arial, sans-serif;
 }
 
 #home {
@@ -60,34 +61,19 @@ body{
 	height: 25px;
 	width: auto;
 }
-/*================#323232==========================================================*/
-#explain {
-	/* background:#666666 url("../../indexresource/img/explain_img.png") no-repeat top; */
-	background-color: #555555;
-}
-.explains-field-title{
-	color: #fff;
-	margin: 0xp 10px;
-    border: 1px solid #e2e2e2;
-    padding: 14px 12px;
-}
-
-.explains-field-title span{
-	font-size:19px;
-}
-.explains-field-title p{
-	font-size: 12px;
-	line-height: 24px;
-}
 
 /*==========================end切換的标题====================================*/
+#experiences {
+	background-color: #999999;
+}
+
 .big-text-center {
 	font-size: 150%;
 	text-align: center;
 }
 
 .small-text-center {
-	color: #99aac2;
+	color: #fff;
 	font-size: 60%;
 	text-align: center;
 }
@@ -96,10 +82,57 @@ body{
 	padding: 0 3% 0 3%;
 }
 
+/*==========================================================================*/
+#explain {
+	/* background:#666666 url("../../indexresource/img/explain_img.png") no-repeat top; */
+	background-color: #888888;
+}
+
+.explains-field-title {
+	color: #fff;
+	margin: 0xp 10px;
+	border: 1px solid #e2e2e2;
+	padding: 14px 12px;
+}
+
+.explains-field-title span {
+	font-size: 19px;
+}
+
+.explains-field-title p {
+	font-size: 12px;
+	line-height: 24px;
+}
+/*=======================================*/
+.explains-field-title {
+	border: 1px solid #e2e2e2;
+	margin: 15px 1px;
+}
+
+.explains-field-title span {
+	display: block;
+	-webkit-padding-start: 2px;
+	-webkit-padding-end: 2px;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+}
+
+.explains-field-title p {
+	font-size: 14px;
+	line-height: 24px;
+}
+/*===============================================*/
+footer .footer-above {
+    background-color: #1f2738;
+}
+
 .foot-wrap {
-	background-color: #2b3b4d;
 	margin-top: 0px;
 	padding-top: 0px;
+	background-color: #1f2738;
+	border-top: 1px solid #2a3345;
 }
 
 .row-content>h3 {
@@ -120,28 +153,13 @@ body{
 	color: #878B91; &: hover { text-decoration : none;
 	color: #c1ba62;
 }
-}
-/*=======================================*/
 
-.explains-field-title{
-	/* margin: 10px 0 20px;
-    border: none;
-    border-top: 1px solid #e2e2e2; */
-    border: 1px solid #e2e2e2;
-	margin: 15px 1px;
 }
-
-.explains-field-title span{
-	display: block;
-    -webkit-padding-start: 2px;
-    -webkit-padding-end: 2px;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-}
-
-.explains-field-title p{
-	font-size: 14px;
-	line-height: 24px;
+/*==================================================*/
+.foot {
+    padding: 16px 0;
+	color: #7e8187;
+	font-size: 12px;
+	background: #1f2738;
+	border-top: 1px solid #2a3345;
 }

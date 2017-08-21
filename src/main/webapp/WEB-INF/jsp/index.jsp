@@ -74,7 +74,13 @@
 		</div>
     </header>
     
-    <section id="explain">
+	<section id="experiences">
+		<h1 class="big-text-center">手机、PC一样的超炫体验</h1>
+		<p class="small-text-center">支持手机端网页浏览(中英两种语言，随系统自动切换)</p>
+		<img src="indexresource/img/pic.png" alt="simple" class="img-responsive center-block" id="fspic"/>	
+	</section>
+
+	<section id="explain">
 		<div class="container">
 			<div class="row text-center">
                 <div class="col-lg-4">
@@ -101,125 +107,7 @@
             </div>
 		</div>
 	</section>
-    
-    
-	<section>
-		<h1 class="big-text-center">手机、PC一样的超炫体验</h1>
-		<p class="small-text-center">支持手机端网页浏览(中英两种语言，随系统自动切换)</p>
-		<img src="indexresource/img/pic.png" alt="simple" class="img-responsive center-block" id="fspic"/>	
-	</section>
 
-    <!-- More Section -->
-    <section class="success" id="readmore">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Tell Me More</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-2 text-right">
-                </div>
-                <div class="col-lg-4 text-left">
-                    <h3>Documentation</h3>
-                    <p>Learn how easy it is to use Echo Publish</p>
-                    <p>Overview ... <a href ="http://playpen.echopublish.com/guide/" target="_blank" style="color:cornsilk;text-decoration:underline">Click here</a></p>
-                    <p>Templates ... <a href ="http://playpen.echopublish.com/template-guide/" target="_blank" style="color:cornsilk;text-decoration:underline">Click here</a></p>
-                    <p>API Guide ... <a href ="http://playpen.echopublish.com/api-guide/" target="_blank" style="color:cornsilk;text-decoration:underline">Click here</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-   
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Pricing</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2 text-right">
-                    <h3>Free</h3>
-                    <p>Developers: apply for your free account</p>
-                    <p>Use Echo Publish at no cost for as long as you like - only pay for production use</p>
-                    <p>(Generated output may contain watermarks, and your access may be rate limited during busy periods)</p>
-                </div>
-                <div class="col-lg-4 text-left">
-                    <h3>Paid</h3>
-                    <p>Remove all watermarks and limits</p>
-                    <h3>$50 per month</h3>
-                    <p>(First 1,000 documents in a month included, +4c per document thereafter)</p>
-                    <p>(If you'd like to host Echo Publish yourself, talk to us about custom pricing.)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Free Account</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <p>Echo Publish is now registering Beta users. Contact us using the form below to request a trial account - we'll get right back to you. Registration does not imply any commitment.</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-					<form name="sentMessage" id="contactForm" action="https://formspree.io/publish@echo-central.com" method="post" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" name="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-	
-	
-	
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
@@ -308,14 +196,8 @@
         
         
         
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        All Rights Reserved.备案号：闽ICP备00000000号-1
-                    </div>
-                </div>
-            </div>
+        <div class="foot">
+        	<div class="end">All Rights Reserved.备案号：闽ICP备00000000号-1</div>
         </div>
     </footer>
 

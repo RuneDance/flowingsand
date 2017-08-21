@@ -209,9 +209,10 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <h3>联系我们</h3>
+                    <h4>联系我们</h4>
                 </div>
                 <div class="row">
+                    
                     <div class="footer-col col-md-12">
                         <ul class="list-inline">
                             <li>
@@ -228,11 +229,12 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
             </div>
         </div>
         
-        <!-- footer -->
+        
         <div class="container-fluid foot-wrap">
 	    <div class="row">
 	        <div class="row-content col-lg-2 col-sm-4 col-xs-6">
@@ -280,7 +282,7 @@
 	        <div class="row-content col-lg-2 col-sm-4 col-xs-6">
 	            <h3>关于</h3>
 	            <ul>
-	                <li><a href="#">关于我们</a></li>
+	                <li><a href="about.html">关于我们</a></li>
 	                <li><a href="#">合作伙伴</a></li>
 	                <li><a href="#">加入我们</a></li>
 	            </ul>
@@ -290,14 +292,8 @@
         
         
         
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        All Rights Reserved.备案号：闽ICP备00000000号-1
-                    </div>
-                </div>
-            </div>
+        <div class="foot">
+        	<div class="end">All Rights Reserved.备案号：闽ICP备00000000号-1</div>
         </div>
     </footer>
 	

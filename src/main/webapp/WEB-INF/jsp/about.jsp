@@ -63,14 +63,9 @@
 		敬请联系本站管理员，谢谢！<br>
 		<span id="email">Email：smallbadoncelaugh@gmail.com</span></p>
 		<footer class="text-center">
-			<div class="footer-below">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">All Rights
-							Reserved.备案号：闽ICP备00000000号-1</div>
-					</div>
-				</div>
-			</div>
+			<div class="foot">
+        		<div class="end">All Rights Reserved.备案号：闽ICP备00000000号-1</div>
+        	</div>
 		</footer>
 	</div>
 	<script id="shader-fs" type="x-shader/x-fragment">
