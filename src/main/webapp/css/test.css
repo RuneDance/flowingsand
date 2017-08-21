@@ -2,24 +2,41 @@
 
 body {
 	color: #000;
-	font-family: Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+	line-height: 1.75em;
+	background: #ebebeb;
+	position: relative;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
+		"Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI",
+		"Microsoft YaHei", sans-serif;
 }
 
-
-/*=================================*/
-
-
-
-.explains-field-title{
-	margin: 0xp 10px;
-    border: 1px solid #e2e2e2;
-    padding: 14px 12px;
+#logo img {
+	height: 25px;
+	width: auto;
 }
 
-.explains-field-title span{
-	font-size:20px;
+.nav_bar{
+	margin-bottom: 4.8px;
 }
-.explains-field-title p{
-	font-size: 14px;
-	line-height: 24px;
+
+#drop-down-menu {
+	/* margin-top: 1.1%; */
+	padding-top: 15px;
+}
+
+#drop-down-menu a i {
+	color: #a9a9a9;
+}
+
+/* bs-example-navbar-collapse-1 {
+	visibility: hidden;
+} */
+
+#drop-down-menu:HOVER {
+	cursor: pointer;
+}
+
+#ddm i:HOVER {
+	color: #fff;
+	/* box-shadow: rgba(255, 225, 200, 0.8) 0 0 0.8em; */
 }

@@ -21,7 +21,7 @@ body {
 
 #drop-down-menu {
 	/* margin-top: 1.1%; */
-	padding-top: 15px;
+	padding-top: 12.5px;
 }
 
 #drop-down-menu a i {
@@ -32,15 +32,28 @@ ul#bs-dropdownmenu {
 	visibility: hidden;
 }
 
+ul#bs-dropdownmenu li{
+	/* border-top:1px solid transparent; */
+	border-bottom: 1px solid #383838;
+}
+
 #drop-down-menu:HOVER {
 	cursor: pointer;
 }
 
-#ddm i:HOVER {
-	color: #fff;
-	/* box-shadow: rgba(255, 225, 200, 0.8) 0 0 0.8em; */
+#ddm i {
+	padding: 7.3px 8.5px;
+	background-color: #383838;
+	border: 1.5px solid #383838;
+	border-radius:3px;
 }
 
+#ddm i:HOVER {
+	color: #fff;
+	background-color: #484848;
+	border: 1.5px solid #484848;
+	border-radius:3px;
+}
 /*====================================================
 	common styles
 ====================================================*/

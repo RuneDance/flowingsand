@@ -47,12 +47,12 @@
 
 	<div class="container">
 		<div class="row nav_bar">
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-2">
 				<a id="logo" class="navbar-brand" href="index.html"> 
 					<img src="indexresource/img/flowingsand.gif" alt="logo" />
 				</a>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
 				<div class="navbar-header page-scroll">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span> 
@@ -61,8 +61,7 @@
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse"
-					id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="bs-dropdownmenu" class="nav navbar-nav">
 						<li class="page-scroll" id="user_name"></li>
 
@@ -84,8 +83,8 @@
 					</ul>
 					<div class="dropdown text-right" id="drop-down-menu">
 						<a class="dropdown-toggle" data-toggle="dropdown" id="ddm"> <i
-							class="fa fa-align-justify fa-2x" id="DropdownMenu"></i>
-						</a>
+							class="fa fa-list fa-1x" id="DropdownMenu"></i>
+						</a><!-- glyphicon glyphicon-th-list -->
 						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ddm">
 							<li role="presentation" class="dropdown-header text-center" id="u_name"></li>
 							<li role="presentation" class="divider"></li>
@@ -120,7 +119,7 @@
 					${item.title}
 				</h1>
 				<div class="post-meta">
-					<span class="author">作者：<span class="author-names">${item.author}</span></span>
+					<span class="author">作者：<a>${item.author}</a></span>
 					•
 					<time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
 				</div>
