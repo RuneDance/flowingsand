@@ -158,9 +158,10 @@ form button {
     font-weight:bolder;
     -webkit-transition-duration: 0.25s;
 	transition-duration: 0.25s;
+	box-shadow: inset 0px 1.5px 10px 1px rgba(238, 241, 255, 0.5);
 }
 
 form button:hover {
 	color: #fff;
-	box-shadow: rgba(255, 225, 200, 0.7) 0 0 0.8em;
+	box-shadow: rgba(201, 200, 255, 0.7) 0 0 0.8em 3px;
 }

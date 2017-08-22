@@ -36,10 +36,10 @@ $(document).ready(function() {
      * 判断用户是否登陆
      */
     if(sessionId !=""){
-    	$("#u_name").html("<strong style='color:#0000FF;font-size: 15.5px;'>"+sessionId+"</strong>");
+    	$("#u_name").html("<span style='color:#0000FF;font-size: 15.5px;'>"+sessionId+"</span>");
     	if(sessionId=="admin"){
     		var html1="<li class='page-scroll'><a href='regist.html'><span class='glyphicon glyphicon-edit btn-xs'> <strong>注册</strong></span></a></li>";
-    		var html2="<li role='presentation' class='text-center'><a role='menuitem' tabindex='-1' href='regist.html'><strong>注册</strong></a></li>";
+    		var html2="<li role='presentation' class='text-center'><a role='menuitem' tabindex='-1' href='regist.html'>注册</a></li>";
     		$("#bs-dropdownmenu").children().eq(0).after(html1);
     		$("#drop-down-menu ul").children().eq(1).after(html2);
     	}

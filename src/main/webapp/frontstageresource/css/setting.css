@@ -108,7 +108,7 @@ body{
 
 button[type="submit"] {
 	padding: 10px 15px;
-    background-color: #4169E1;
+    background-color: #003ef8;
     text-align: center;
     border-radius: 5px;
     overflow: hidden;
@@ -118,10 +118,12 @@ button[type="submit"] {
     font-weight:bolder;
     -webkit-transition-duration: 0.25s;
 	transition-duration: 0.25s;
+	/* box-shadow: inset 0px 1.5px 10px 1px rgba(238, 241, 255, 0.5); */
+	box-shadow: inset 0 3px 10px rgba(242, 241, 246, 0.4);
 }
 
 button[type="submit"]:hover {
 	color: #fff;
 	background-color: #0000FF;
-	/* box-shadow: rgba(255, 225, 200, 0.7) 0 0 0.8em; */
+	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
 }

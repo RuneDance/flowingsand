@@ -84,18 +84,18 @@
 					<div class="dropdown text-right" id="drop-down-menu">
 						<a class="dropdown-toggle" data-toggle="dropdown" id="ddm"> <i
 							class="fa fa-list fa-1x" id="DropdownMenu"></i>
-						</a><!-- glyphicon glyphicon-th-list -->
+						</a>
 						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ddm">
 							<li role="presentation" class="dropdown-header text-center" id="u_name"></li>
 							<li role="presentation" class="divider"></li>
 							<li role="presentation" class="text-center" id="p_set">
-								<a role="menuitem" tabindex="-1" href="#"><strong>个人设置</strong></a>
+								<a role="menuitem" tabindex="-1" href="#"><span>个人设置</span></a>
 							</li>
 							<li role="presentation" class="text-center" id="c_mes">
-								<a role="menuitem" tabindex="-1" href="#"><strong>消息中心</strong></a>
+								<a role="menuitem" tabindex="-1" href="#"><span>消息中心</span></a>
 							</li>
 							<li role="presentation" class="text-center exit_set">
-								<aid="exit" role="menuitem" tabindex="-1" href='#'><strong>退出</strong></a>
+								<a id="exit" role="menuitem" tabindex="-1" href='#'><span>退出</span></a>
 							</li>
 						</ul>
 					</div>
