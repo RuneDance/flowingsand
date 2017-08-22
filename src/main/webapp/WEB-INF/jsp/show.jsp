@@ -70,7 +70,7 @@
 				<div class="post-head">
 					<h1 class="post-title">${item.title}</h1>
 					<div class="post-meta">
-						<span class="author">作者：<a href="#">${item.author}</a></span> •
+						<span class="author">作者：<a>${item.author}</a></span> •
 						<time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
 					</div>
 				</div>
@@ -82,7 +82,6 @@
 				<div class="post-content">
 					<p>${item.acontents}</p>
 				</div>
-				<footer class="post-footer clearfix"> </footer> 
 			</article>
 			</c:forEach>
 			</main>

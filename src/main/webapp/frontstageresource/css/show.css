@@ -8,7 +8,7 @@
 body {
 	color: #505050;
 	line-height: 1.75em;
-	background: #ebebeb;
+	background: #f5f5d5;
 	position: relative;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
@@ -23,14 +23,17 @@ body {
 
 .post {
     padding: 35px;
-    background: #ffffff;
+    background: #f5f5d5;
+    /* border: 1px solid #cec0c0;
+    border-radius: 4px; */
 }
 
-.post .post-footer {
+/* .post .post-footer {
     margin-top: 30px;
     border-top: 1px solid #ebebeb;
     padding: 21px 0 0;
-}
+} */
+
 .post .post-head {
     text-align: center;
 }
@@ -44,6 +47,11 @@ body {
 .post .post-head .post-meta {
     color: #959595;
     margin: 14px 0px;
+}
+
+.post .post-head .post-meta span a {
+	color: #333333;
+	text-decoration: none;
 }
 
 .post .featured-media img {

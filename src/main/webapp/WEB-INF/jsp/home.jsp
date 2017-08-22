@@ -119,9 +119,7 @@
 					${item.title}
 				</h1>
 				<div class="post-meta">
-					<span class="author">作者：<a>${item.author}</a></span>
-					•
-					<time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
+					<span class="author">作者：<a>${item.author}</a></span>• <time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
 				</div>
 			</div>
 			
@@ -186,7 +184,7 @@
 	<!-- start tag cloud widget -->
 	<div class="widget">
 		<h4 class="title text-center">社区</h4>
-		<hr>
+		<hr/>
 		<div class="content community">
 			<p class="communion">与我们交流</p>
 			<p><a href="#" title="Ghost中文网问答社区" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i> 问答社区</a></p>

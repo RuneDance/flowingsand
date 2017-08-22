@@ -3,7 +3,7 @@
 body {
 	color: #000;
 	line-height: 1.75em;
-	background: #ebebeb;
+	background: #f5f5d5;
 	position: relative;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
 		"Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI",
@@ -127,10 +127,12 @@ a:active, a:focus, a img {
 ====================================================*/
 .post {
 	padding: 35px;
-	background: #ffffff;
+	background: #f5f5d5;
 	margin-bottom: 35px;
 	position: relative;
 	overflow: hidden;
+	border: 1px solid #cec0c0;
+	border-radius: 4px;
 }
 
 .post .post-head {
@@ -155,6 +157,11 @@ a:active, a:focus, a img {
 	white-space: nowrap;
 }
 
+.post .post-head .post-meta span a{
+	color: #333333;
+	text-decoration: none;
+}
+
 .post .post-head .post-meta .author-names{
 	color: #33FFFF;
 }
@@ -173,7 +180,7 @@ a:active, a:focus, a img {
 
 .post .post-footer {
 	margin-top: 30px;
-	border-top: 1px solid #ebebeb;
+	border-top: 1px solid #d0cead;
 	padding: 21px 0 0;
 }
 
@@ -219,12 +226,17 @@ a:active, a:focus, a img {
 }
 
 .sidebar .widget {
-    background: #ffffff;
     padding: 21px 30px;
+    border: 1px solid #cec0c0;
+    border-radius: 4px;
 }
 
 .widget {
 	margin-bottom: 35px;
+}
+
+.widget hr {
+	border-color: #d0cead; 
 }
 
 .widget .communion {
