@@ -11,12 +11,15 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import net.sf.json.JSONArray;
+
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -215,6 +218,45 @@ public class HomeController extends BaseController {
 		}
 	}
 	
+	/**
+	 * 查询普通用户名
+	 * @return
+	 */
+	@RequestMapping(value = "/queryusers", method = RequestMethod.POST)
+	@ResponseBody
+	public String queryUsers(){
+		List<String> accounts=homeService.selectUserNames();
+		JSONArray json=JSONArray.fromObject(accounts);
+		return json.toString();
+	}
+	
+	/**
+	 * 发送消息
+	 * @param message
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/sendmessages")
+	public String sendMessages(Message message, HttpServletRequest request){
+		message.setMname(request.getParameter("mname"));
+		message.setMtime(df.format(new Date()));
+		message.setMessages(request.getParameter("messages"));
+		
+		int res = homeService.insertMessages(message);
+		if(res ==1){
+			return "setting";
+		}else{
+			new Exception();
+			return "error";
+		}
+	}
+	
+	/**
+	 * 
+	 * @param request
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value="/messhow")
 	@ResponseBody
 	public String showMessageDetails(HttpServletRequest request,@RequestParam(value = "id", required = false) Integer id){

@@ -82,6 +82,11 @@ $(document).ready(function() {
 	$(document).bind("contextmenu", function(e) {
 		return false;
 	});
+	if($("#sessionId").val() == "admin"){
+		var html ="<li><a href='#send-messages' data-toggle='tab'>写消息</a></li>";
+		$("section .container .row .nav-tabs").children().eq(2).after(html);
+		$("#send-messages").css("visibility","visible");
+	}
 	$("#validateEmail").easyform();
 	$('#send-button').click(function (event) {
 		var email=$.trim($("#email").val());
@@ -125,6 +130,34 @@ $(document).ready(function() {
 		
 	});
     
+	
+	/*********************写消息*************************/
+	
+	function SelectChange() {
+		$.ajax({
+			url:"queryusers.html",
+			cache: false,
+	        type:"POST",
+	        dataType: "json",
+            contentType: "application/json",
+	        success:function(data){
+	        	$("select#users").empty();
+	        	var optionStr = "";
+	        	for (var i=0; i<data.length; i++) {
+                    optionStr += "<option value='"+ data[i] +"'>" + data[i] + "</option>";  
+                }
+	        	/*"<option value='opt1'>请选择用户</option>"+*/
+	        	$("select#users").append(optionStr);
+	        },  
+	        error:function(data){  
+	        	window.location.href="error.html";
+	        }
+		});
+	}
+	
+	$("select#users").focus(function(){
+		SelectChange();
+	});
 	
 });
 
@@ -219,6 +252,30 @@ function release(){
 		return false;
 	}
 	
-	
+}
+
+/**
+ * 发送消息
+ * @returns {Boolean}
+ */
+function rel_Message(){
+	var users=$.trim($("#users").val());
+	var date=$.trime($("date").val());
+	var mess_acontents=$.trim($("#messages-acontents").val());
+	if(users ==""){
+		var tip = $("#users").easytip({position : "top",class : "easy-red"});
+		tip.show("用户名不能为空！");
+		return false;
+	}
+	if(date == ""){
+		var tip = $("#date").easytip({position : "top",class : "easy-red"});
+		tip.show("时间不能为空！");
+		return false;
+	}
+	if(mess_acontents ==""){
+		var tip = $("#messages-acontents").easytip({position : "top",class : "easy-red"});
+		tip.show("内容不能为空！");
+		return false;
+	}
 	
 }

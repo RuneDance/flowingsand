@@ -37,8 +37,15 @@
     <!-- easing.min.js -->
     <!-- <script src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
 	<script type="text/javascript" src="frontstageresource/js/setting.js"></script>
+	<% 
+		String sname="";
+		if(session.getAttribute("sname") != null){
+			sname=request.getSession().getAttribute("sname").toString();
+		}
+	%>
 </head>
 <body>
+	<input id="sessionId" type="hidden" value="<%=sname%>" />
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -54,27 +61,17 @@
 	<div class="container">
 		<div class="row">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#usercenter" data-toggle="tab">个人中心</a></li>
-				<li><a href="#profile_set" data-toggle="tab">资料设置</a></li>
+				<li class="active"><a href="#profile_set" data-toggle="tab">资料设置</a></li>
 				<li><a href="#pwd_set" data-toggle="tab">修改密码</a></li>
 				<li><a href="#release" data-toggle="tab">写内容</a></li>
+				<!-- <li><a href="#send-messages" data-toggle="tab">写消息</a></li> -->
 			</ul>
 
 			<div class="row tab-content">
-				<div class="tab-pane fade in active" id="usercenter">
-					<div class="container">
-							<div class="row text-center">
-								<h5><strong>Test……1</strong></h5>
-			                    <h5><strong>Test……1</strong></h5>
-			                    <h5><strong>Test……1</strong></h5>
-			                    <h5><strong>Test……1</strong></h5>
-							</div>
-					</div>
-				</div>
 
 
 				<!-- 修改个人资料 -->
-				<div class="tab-pane fade in" id="profile_set">
+				<div class="tab-pane fade in active" id="profile_set">
 					<div class="container">
 						<div class="row text-center">
 							<form id="editpwdForm" role="form" method="post" action="" class="col-xs-12">
@@ -141,6 +138,29 @@
 					</div>
 				</div>
 				<!-- /写内容 -->
+				
+				<div class="tab-pane fade in" id="send-messages">
+					<div class="container">
+						<form id="releaseMessage" method="post" action="sendmessages.html" onsubmit = "return rel_Message();">
+							<div class="row text-center">
+								<select id="users" name ="mname" class="form-control">
+									<option value="opt">请选择用户</option>
+								</select>
+							</div>
+							
+							<div class="row text-center">
+								<textarea id="messages-acontents" class="form-control" rows="7" placeholder="消息内容" name="messages"></textarea>
+							</div>
+							
+							<div class="row text-center">
+								<button type="submit" class="btn btn-primary">发 送</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				
+				
 			</div>
 		</div>
 	</div>

@@ -128,7 +128,25 @@ public class HomeServiceImpl implements HomeService {
 		int res = iHomeDao.deleteMessagesById(id);
 		return res;
 	}
-
+	
+	/**
+	 * 查询普通用户名
+	 */
+	@Override
+	public List<String> selectUserNames() {
+		List<String> accounts=iHomeDao.selectUserNames();
+		return accounts;
+	}
+	
+	/**
+	 * 向用户发送消息
+	 */
+	@Override
+	public Integer insertMessages(Message message) {
+		int res=iHomeDao.insertMessages(message);
+		return res;
+	}
+	
 	/**
 	 * 根据Id进行消息查询
 	 */
@@ -141,5 +159,7 @@ public class HomeServiceImpl implements HomeService {
 			return null;
 		}
 	}
+
+
 
 }

@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
+import com.flowingsand.entity.Accounts;
 import com.flowingsand.entity.Article;
 import com.flowingsand.entity.Message;
 
@@ -60,7 +61,20 @@ public interface HomeService {
 	 * @return
 	 */
 	public Integer deleteMessage(Integer id);
-
+	
+	/**
+	 * 查询普通用户名
+	 * @return
+	 */
+	public List<String> selectUserNames();
+	
+	/**
+	 * 向用户发送消息
+	 * @param message
+	 * @return
+	 */
+	public Integer insertMessages(Message message);
+	
 	/**
 	 * 根据Id进行消息查询
 	 * 

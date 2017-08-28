@@ -15,9 +15,6 @@ $(document).ready(function(){
 		var html="<li class='page-scroll'><a id='reg' href='regist.html'><span class='glyphicon glyphicon-user btn-xs'> <strong>注册</strong></span></a></li>"
 		$("#bs-example-navbar-collapse-1 ul").children().eq(0).after(html);
 	}
-	
-	var html="<li class='page-scroll'><a id='abo' href='about.html'><span class='glyphicon glyphicon-hand-right btn-xs'> <strong>关于</strong></span></a></li>"
-	$("#bs-example-navbar-collapse-1 ul").children().eq(1).after(html);
 	window.onload=function(){
 		setInterval(function(){
 			myDate();

@@ -127,3 +127,66 @@ button[type="submit"]:hover {
 	background-color: #0000FF;
 	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
 }
+
+/************************写消息*************************/
+select#users{
+    border-radius: 8px;
+    margin: 40px auto 40px auto;
+    border: 1px solid #f3f3f3;
+    color: #000;
+    font-size: 16px;
+    /* font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-weight: 400;
+    display: block; */
+    background: #fff;
+    height: 44px;
+    width: 250px;
+}
+
+#send-messages {
+	visibility: hidden;
+}
+
+select#users option{
+	/* width: 250px;
+	text-align: center; */
+}
+
+/* select#users:focus{
+	border: 1px solid #f3f3f3;
+	border-radius: 8px;
+} */
+
+/* #send-messages input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 auto 40px auto;
+    border: 1px solid #f3f3f3;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    background: #fff;
+    width: 250px;
+}
+
+#send-messages input[type="text"]:focus {
+    background: #fff;
+    border-color: #f3f3f3;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+} */
+
+textarea#messages-acontents{
+	margin: 0 auto 80px auto;
+	color: #000;
+	text-indent:2em;
+	font-size: 16px;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    background: #fff;
+    border-color: #f3f3f3;
+    outline:none;
+    resize: none;
+}

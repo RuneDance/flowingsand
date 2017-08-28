@@ -56,6 +56,11 @@
                         	<span class="glyphicon glyphicon-home btn-xs"> <strong>主页</strong></span>
                         </a>
                     </li>
+                    <li class="page-scroll">
+                        <a id="abo" href="about.html">
+                        	<span class="glyphicon glyphicon-hand-right btn-xs"> <strong>关于</strong></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -35,7 +35,13 @@ public interface IHomeDao {
 
 	// 根据Id删除消息
 	public Integer deleteMessagesById(Integer id);
-
+	
+	// 查询普通用户名
+	public List<String> selectUserNames();
+	
+	//向用户发送消息
+	public int insertMessages(@Param("message") Message message);
+	
 	// 根据Id进行消息查询
 	public List<Message> selectMessagesById(Integer id);
 }

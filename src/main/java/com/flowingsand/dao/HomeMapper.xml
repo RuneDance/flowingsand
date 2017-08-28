@@ -46,17 +46,31 @@
 		where art.aid = #{aid};
 	</select>
 	<!-- 根据用户名进行信息查询 -->
-	<select id="selectMessagesByUser" parameterType="java.lang.String"
-		resultType="message">
-		select mes.mid,mes.mname,mes.mtime,mes.messages from message mes where mes.mname=#{name} order by mes.mid;
+	<select id="selectMessagesByUser" parameterType="java.lang.String" resultType="message">
+		select mes.mid,mes.mname,mes.mtime,mes.messages from Message mes where mes.mname=#{name} order by mes.mid;
 	</select>
 	 <!-- 根据Id删除消息 -->
 	<delete id="deleteMessagesById" parameterType="java.lang.Integer">
-		delete from message where mid=#{id};
+		delete from Message where mid=#{id};
 	</delete>
+	
+	<!-- 查询普通用户名 -->
+	<select id="selectUserNames" resultType="String">
+		select
+		acc.uname from Accounts acc
+		where acc.lid = 1;
+	</select>
+	
+	<!-- 向用户发送消息 -->
+	<insert id="insertMessages" parameterType="message">
+		insert into
+		Message
+		(mid,mname,mtime,messages) values
+		(#{message.mid},#{message.mname},#{message.mtime},#{message.messages})
+	</insert>
+	
 	<!-- 根据Id进行消息查询 -->
-	<select id="selectMessagesById" parameterType="java.lang.Integer"
-		resultType="message">
-		select mes.mid,mes.mname,mes.mtime,mes.messages from message mes where mes.mid=#{id} order by mes.mid;
+	<select id="selectMessagesById" parameterType="java.lang.Integer" resultType="message">
+		select mes.mid,mes.mname,mes.mtime,mes.messages from Message mes where mes.mid=#{id} order by mes.mid;
 	</select>
 </mapper>
