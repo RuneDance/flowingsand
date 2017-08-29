@@ -28,11 +28,6 @@ body {
     border-radius: 4px; */
 }
 
-/* .post .post-footer {
-    margin-top: 30px;
-    border-top: 1px solid #ebebeb;
-    padding: 21px 0 0;
-} */
 
 .post .post-head {
     text-align: center;
@@ -54,13 +49,27 @@ body {
 	text-decoration: none;
 }
 
+.post .featured-media {
+	padding-left: 11%;
+}
+
 .post .featured-media img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    display: block;
+    background-color: #fff;
+    padding: 4px;
+    border: 1px solid #ece8e8;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 a:active, a:focus, a img {
     outline: none;
+}
+
+.post-content {
+	padding-left: 11%;
 }
 
 .post-content p {
@@ -71,13 +80,16 @@ a:active, a:focus, a img {
     line-height: 1.7;
     font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     text-indent: 2em;
-    margin-top: 0;
-    margin-bottom: 1.46em;
+    margin: 0;
 }
 
-
-/* ::selection {
-	color: #ffffff;
-	background: #f4645f;
-	text-shadow: none;
-} */
+.post-content img {
+	width: 90%;
+    height: auto;
+    display: block;
+    background-color: #fff;
+    padding: 4px;
+    border: 1px solid #ece8e8;
+    border-radius: 4px;
+    margin: 20px 0px;
+}

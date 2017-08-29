@@ -260,16 +260,10 @@ function release(){
  */
 function rel_Message(){
 	var users=$.trim($("#users").val());
-	var date=$.trime($("date").val());
 	var mess_acontents=$.trim($("#messages-acontents").val());
-	if(users ==""){
+	if(users =="opt" || users ==""){
 		var tip = $("#users").easytip({position : "top",class : "easy-red"});
-		tip.show("用户名不能为空！");
-		return false;
-	}
-	if(date == ""){
-		var tip = $("#date").easytip({position : "top",class : "easy-red"});
-		tip.show("时间不能为空！");
+		tip.show("请选择用户！");
 		return false;
 	}
 	if(mess_acontents ==""){

@@ -64,7 +64,6 @@
 				<li class="active"><a href="#profile_set" data-toggle="tab">资料设置</a></li>
 				<li><a href="#pwd_set" data-toggle="tab">修改密码</a></li>
 				<li><a href="#release" data-toggle="tab">写内容</a></li>
-				<!-- <li><a href="#send-messages" data-toggle="tab">写消息</a></li> -->
 			</ul>
 
 			<div class="row tab-content">
@@ -138,7 +137,7 @@
 					</div>
 				</div>
 				<!-- /写内容 -->
-				
+				<!-- 写消息 -->
 				<div class="tab-pane fade in" id="send-messages">
 					<div class="container">
 						<form id="releaseMessage" method="post" action="sendmessages.html" onsubmit = "return rel_Message();">
@@ -158,7 +157,7 @@
 						</form>
 					</div>
 				</div>
-				
+				<!-- /写消息 -->
 				
 				
 			</div>

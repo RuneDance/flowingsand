@@ -59,6 +59,14 @@ ul#bs-dropdownmenu li{
 	border: 1.19px solid #000;
 	border-radius:3px;
 }
+
+#u_name a span {
+	color:#FF0000;
+	font-size: 14px;
+}
+.dropdown-menu .divider {
+	margin: 9px 15px;
+}
 /*=======================383838======484848=======================
 	common styles
 ====================================================*/

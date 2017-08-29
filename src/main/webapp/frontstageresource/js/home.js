@@ -36,7 +36,7 @@ $(document).ready(function() {
      * 判断用户是否登陆
      */
     if(sessionId !=""){
-    	$("#u_name").html("<span style='color:#0000FF;font-size: 15.5px;'>"+sessionId+"</span>");
+    	$("#u_name").html("<span style='color:#0000FF;font-size: 17px;'>"+sessionId+"</span>");
     	if(sessionId=="admin"){
     		var html1="<li class='page-scroll'><a href='regist.html'><span class='glyphicon glyphicon-edit btn-xs'> <strong>注册</strong></span></a></li>";
     		var html2="<li role='presentation' class='text-center'><a role='menuitem' tabindex='-1' href='regist.html'>注册</a></li>";
@@ -46,7 +46,7 @@ $(document).ready(function() {
     	$("#c_mes a").attr('href','message.html');
     	$("#p_set a").attr('href','setting.html');
     }else{
-    	$("#u_name").html("<a href='user.html'><span><strong style='color:#FF0000'>请登录！</strong></span></a>");
+    	$("#u_name").html("<a role='menuitem' tabindex='-1' href='user.html'><span>请登录</span></a>");
     	var centerVal=$("#c_mes").eq(0).attr('class');
     	var setVal=$("#p_set").eq(0).attr('class');
     	if((centerVal.substring(centerVal.length)) =="" ||(setVal.substring(setVal.length)) ==""){

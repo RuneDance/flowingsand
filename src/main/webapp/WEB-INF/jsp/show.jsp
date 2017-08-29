@@ -76,11 +76,11 @@
 				</div>
 	
 				<div class="featured-media">
-					<a href='${item.link}' class="thumbnail"> <img src='${item.link}' alt="图片" />
-					</a>
+					<img src='${item.link}' alt="图片" />
+					<%-- <a href='${item.link}' class="thumbnail"> <img src='${item.link}' alt="图片" /></a> --%>
 				</div>
 				<div class="post-content">
-					<p>${item.acontents}</p>
+					${item.acontents}
 				</div>
 			</article>
 			</c:forEach>

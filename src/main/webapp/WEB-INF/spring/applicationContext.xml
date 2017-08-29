@@ -49,9 +49,16 @@
 		<property name="basePackage" value="com.flowingsand.dao" />
 	</bean>
 	<!-- 对数据源进行事务管理 -->
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-
+	<!-- 声明一个Encryptor的引用 -->
+	<!-- <bean id="strongEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+	    <property name="algorithm">
+	        <value>PBEWithMD5AndTripleDES</value>
+	    </property>
+	    <property name="password">
+	        <value>jasypt</value>
+	    </property>
+  </bean> -->
 </beans>
