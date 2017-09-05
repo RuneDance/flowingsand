@@ -1,19 +1,24 @@
 package com.flowingsand.controller;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -22,12 +27,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.flowingsand.entity.Article;
 import com.flowingsand.entity.Message;
 import com.flowingsand.service.HomeService;
+import com.flowingsand.utils.Global;
 import com.flowingsand.utils.OSinfo;
 
 @Controller
@@ -39,28 +44,6 @@ public class HomeController extends BaseController {
 	DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
 	DateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
 	DateFormat sdfn = new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
-	/**
-	 * 判断上传的图片link是否为空
-	 */
-	public void isLinkNull(){
-		if (article != null) {
-			for (Article lists : article) {
-				if (lists.getLink() == "") {
-					String ostype = OSinfo.getOSname().toString();
-					if (ostype.equals("Windows")) {
-						lists.setLink("/flowingsand/images/temporary.jpg");
-					} else if (ostype.equals("Linux")) {
-						lists.setLink("/images/temporary.jpg");
-					}
-				}
-				try {
-					lists.setAtime(sdf.format(df.parse(lists.getAtime())));
-				} catch (ParseException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}
 	
 	@RequestMapping(value = "/show")
 	public String initialShow() {
@@ -81,7 +64,6 @@ public class HomeController extends BaseController {
 	public String showDetails(HttpServletRequest request,@RequestParam(value = "aid", required = false) Integer aid) {
 		HttpSession session = request.getSession();
 		article=this.homeService.showArticlesDetails(aid);
-		this.isLinkNull();
 		session.setAttribute("adetails", article);
 		return "showok";
 	}
@@ -97,72 +79,81 @@ public class HomeController extends BaseController {
 		String name = (String) request.getSession().getAttribute("sname");
 		if (name != null) {
 			article = this.homeService.showArticlesByPage(request, model, name);
-			this.isLinkNull();
 		} else {
 			article = this.homeService.showAllArticlesByPage(request, model);
-			this.isLinkNull();
 		}
 		return new ModelAndView("home");
 
 	}
-
+	
+	
+	
 	/**
-	 * 发布内容
+	 * 内容发布
 	 * @param article
 	 * @param request
-	 * @param imageFile
+	 * @param contents
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/upload")
-	public ModelAndView upload(Article article, HttpServletRequest request,@RequestParam("imageFile") MultipartFile imageFile) throws Exception {
+	@RequestMapping(value = "/relContents", method = RequestMethod.POST)
+	@ResponseBody
+	public ModelAndView relContents(Article article, HttpServletRequest request,
+			@RequestParam(value = "contents", required = false) String contents,
+			@RequestParam(value = "title", required = false) String title) throws Exception {
+		OutputStream out;
 		String userName = (String) request.getSession().getAttribute("sname");
 		String ostype = OSinfo.getOSname().toString();
-		String title = request.getParameter("title");
-		String acontents = request.getParameter("acontents");
 		String uuid = UUID.randomUUID().toString();
 		String uploadTime = df.format(new Date());
-		String URL_WINDOWS = "D:/attaches";
-		String URL_LINUX = "/home/attaches";
-		if (userName == null) {
-			return new ModelAndView("redirect:/user.html");
-		}
-		try {
-			String extension = FilenameUtils.getExtension(imageFile.getOriginalFilename());
-			// 拼接的新图片名称
-			String relName = "/" + userName + uploadTime + uuid + "." + extension;
-			if (ostype.equals("Windows")) {
-				article.setLink("http://localhost//attaches" + relName);
-				File file = new File(URL_WINDOWS);
-				if (!file.exists()) {
-					file.mkdirs();
-				}
-				imageFile.transferTo(new File(URL_WINDOWS + relName));
-			} else if (ostype.equals("Linux")) {
-				article.setLink("http://flowingsand.com//home/attaches" + relName);
-				File file = new File(URL_LINUX);
-				if (!file.exists()) {
-					file.mkdirs();
-				}
-				imageFile.transferTo(new File(URL_LINUX + relName));
-			}
-			article.setTitle(title);
-			article.setAcontents(acontents);
-			if (extension != "") {
-				
-				if (ostype.equals("Windows")) {
-					article.setLink("http://localhost//attaches" + relName);
+		String regExpImg = "<img\\ssrc=\"\\S*\">";
+		ArrayList<String> lists=new ArrayList<String>();
+		Pattern pattern = Pattern.compile(regExpImg);
+		Matcher matcher = pattern.matcher(contents);
+		while (matcher.find()) {
+			lists.add(matcher.group());
+        }
+		for (String list : lists) {
+			String encodeVal=list.split("\"")[1].split(",")[1];
+			String substr = list.split("\"")[1].split(",")[0];
+			String origFileName=substr.substring(substr.indexOf("/")+1, substr.indexOf(";"));
+			String rename = userName + uploadTime + uuid + "." + origFileName;
+			 byte[] b = Base64.decodeBase64(encodeVal);
+			 //调整异常数据
+			 for(int i=0;i<b.length;++i){
+				 if(b[i]<0){
+					 b[i]+=256;
+	             }
+			 }
+			 if (ostype.equals("Windows")) {
+					File file = new File(Global.URL_WINDOWS);
+					if (!file.exists()) {
+						file.mkdirs();
+						file.renameTo(new File(Global.URL_WINDOWS+"/attaches"));
+					}
+					//生成图片到本地
+					out = new FileOutputStream(Global.URL_WINDOWS + rename);
+					out.write(b);
+					out.flush();
+					out.close();
+					article.setAcontents(contents.replace(list,"<img src="+ "http://localhost/" + Global.URL_WINDOWS + rename + "/>"));
 				} else if (ostype.equals("Linux")) {
-					article.setLink("http://flowingsand.com//home/attaches" + relName);
+					File file = new File(Global.URL_LINUX);
+					if (!file.exists()) {
+						file.mkdirs();
+						file.renameTo(new File(Global.URL_LINUX + "/attaches"));
+					}
+					//生成图片到本地
+					out = new FileOutputStream(Global.URL_LINUX + rename);
+					out.write(b);
+					out.flush();
+					out.close();
+					article.setAcontents(contents.replace(list,"<img src=" +"http://flowingsand.com/"+ Global.URL_LINUX + rename + "/>"));
 				}
-			} else {
-				article.setLink("");
-			}
-			article.setAtime(uploadTime);
-			article.setAuthor(userName);
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
+		article.setTitle(title);
+		article.setAtime(uploadTime);
+		article.setAuthor(userName);
 		int result = homeService.insertContents(article);
 		if (result == 1) {
 			return new ModelAndView("redirect:/home.html");

@@ -124,11 +124,11 @@
 				</div>
 			</div>
 			
-			<div class="featured-media">
+			<%-- <div class="featured-media">
 				<a href='${item.link}' class="thumbnail">
 					<img src='${item.link}' alt="图片" />
 				</a>
-			</div>
+			</div> --%>
 			<div class="post-content">
 				<c:if test="${fn:length(item.acontents)>'121'}">
 					<p>${item.acontents.substring(0,121)} ……</p>

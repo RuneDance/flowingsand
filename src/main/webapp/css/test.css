@@ -1,42 +1,48 @@
 @CHARSET "UTF-8";
 
-body {
-	color: #000;
-	line-height: 1.75em;
-	background: #ebebeb;
-	position: relative;
-	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
-		"Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI",
-		"Microsoft YaHei", sans-serif;
+body{
+	 font-family: 'microsoft yahei',Arial,sans-serif;
 }
 
-#logo img {
-	height: 25px;
-	width: auto;
+
+#editor {
+	max-height: 300px;
+	height: 550px;
+	background-color: white;
+	border-collapse: separate; 
+	border: 1px solid rgb(204, 204, 204); 
+	padding: 4px; 
+	box-sizing: content-box; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; 
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
+	overflow: scroll;
+	outline: none;
 }
 
-.nav_bar{
-	margin-bottom: 4.8px;
+/* #editor {overflow:scroll; max-height:300px} */
+
+#voiceBtn {
+  width: 20px;
+  color: transparent;
+  background-color: transparent;
+  transform: scale(2.0, 2.0);
+  -webkit-transform: scale(2.0, 2.0);
+  -moz-transform: scale(2.0, 2.0);
+  border: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
-#drop-down-menu {
-	/* margin-top: 1.1%; */
-	padding-top: 15px;
+div[data-role="editor-toolbar"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#drop-down-menu a i {
-	color: #a9a9a9;
-}
-
-/* bs-example-navbar-collapse-1 {
-	visibility: hidden;
-} */
-
-#drop-down-menu:HOVER {
-	cursor: pointer;
-}
-
-#ddm i:HOVER {
-	color: #fff;
-	/* box-shadow: rgba(255, 225, 200, 0.8) 0 0 0.8em; */
+.dropdown-menu a {
+  cursor: pointer;
 }

@@ -5,57 +5,46 @@
     padding: 0;
 }
 
-#fslogo{
-	height:25px;
-    width: auto;
-}
-
 body{
 	/* background: #ebebeb; */
 	background:#323232 url("../img/personal_center.png") no-repeat;
 }
 
-#title{
-	width: 100%;
-	height: 40px;
-	margin: 40px 0;
-	border-radius: 8px;
-    border: 1px solid #f3f3f3;
-    color: #000;
-	font-size: 16px;
-    font-family: 'Cabin', helvetica, arial, sans-serif;
+#fslogo{
+	height:25px;
+    width: auto;
+}
+
+.container .navbar-header a {
+	margin: 0px 0px 4.8px 50px;
+}
+
+section {
+    padding: 60px 0px 0px 0px;
+}
+
+/*=====================资料设置==========================*/
+#profile_set button[type="submit"] {
+	padding: 10px 15px;
+    background-color: #003ef8;
     text-align: center;
-    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px;
+    border: none;
+    color: #A9A9A9;
+    font-weight:bolder;
+    -webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	box-shadow: inset 0 3px 10px rgba(242, 241, 246, 0.4);
 }
 
-#title:focus{
-	-webkit-animation: glow 800ms ease-out infinite alternate;
-    -moz-animation: glow 800ms ease-out infinite alternate;
-    -o-animation: glow 800ms ease-out infinite alternate;
-    -ms-animation: glow 800ms ease-out infinite alternate;
-    animation: glow 800ms ease-out infinite alternate;
-    background: #fff;
-    border-color: #f3f3f3;
-    outline: none;
+#profile_set button[type="submit"]:hover {
+	color: #fff;
+	background-color: #0000FF;
+	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
 }
-
-
-#release #content{
-	margin: 30px 0;
-	color: #000;
-	text-indent:2em;
-	font-size: 16px;
-    font-family: 'Cabin', helvetica, arial, sans-serif;
-    background: #fff;
-    border-color: #f3f3f3;
-    outline:none;
-    resize: none;
-}
-#release #content:HOVER{
-    background: #fff;
-    border-color: #f3f3f3;
-}
-
+/*=====================密码修改===========================*/
 .send-tips{
 	color:#CC0000;
 	font-size: 15px;
@@ -91,22 +80,17 @@ body{
     text-align: center;
     background: #fff;
     width: 250px;
+    height: 44px;
 }
 
 #pwd_set input[type="text"]:focus, input[type="password"]:focus {
-    /* -webkit-animation: glow 800ms ease-out infinite alternate;
-    -moz-animation: glow 800ms ease-out infinite alternate;
-    -o-animation: glow 800ms ease-out infinite alternate;
-    -ms-animation: glow 800ms ease-out infinite alternate;
-    animation: glow 800ms ease-out infinite alternate; */
     background: #fff;
     border-color: #f3f3f3;
     outline: none;
     width: 300px;
 }
 
-
-button[type="submit"] {
+#pwd_set button[type="submit"] {
 	padding: 10px 15px;
     background-color: #003ef8;
     text-align: center;
@@ -118,17 +102,18 @@ button[type="submit"] {
     font-weight:bolder;
     -webkit-transition-duration: 0.25s;
 	transition-duration: 0.25s;
-	/* box-shadow: inset 0px 1.5px 10px 1px rgba(238, 241, 255, 0.5); */
 	box-shadow: inset 0 3px 10px rgba(242, 241, 246, 0.4);
 }
 
-button[type="submit"]:hover {
+#pwd_set button[type="submit"]:hover {
 	color: #fff;
 	background-color: #0000FF;
 	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
 }
 
-/************************写消息*************************/
+
+/************************消息发布*************************/
+
 select#users{
     border-radius: 8px;
     margin: 40px auto 40px auto;
@@ -157,7 +142,7 @@ select#users option{
 	border-radius: 8px;
 } */
 
-/* #send-messages input[type="text"] {
+#send-messages input[type="text"] {
     padding: 10px;
     border-radius: 8px;
     margin: 0 auto 40px auto;
@@ -177,7 +162,7 @@ select#users option{
     border-color: #f3f3f3;
     outline: none;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-} */
+}
 
 textarea#messages-acontents{
 	margin: 0 auto 80px auto;
@@ -189,4 +174,115 @@ textarea#messages-acontents{
     border-color: #f3f3f3;
     outline:none;
     resize: none;
+}
+
+#send-messages button[type="submit"] {
+	padding: 10px 15px;
+    background-color: #003ef8;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px;
+    border: none;
+    color: #A9A9A9;
+    font-weight:bolder;
+    -webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	box-shadow: inset 0 3px 10px rgba(242, 241, 246, 0.4);
+}
+
+#send-messages button[type="submit"]:hover {
+	color: #fff;
+	background-color: #0000FF;
+	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
+}
+
+/*=================================内容发布=================================*/
+#release input[type="text"]#titles {
+    border-radius: 8px;
+    margin: 0 auto 0px auto;
+    border: 1px solid #f3f3f3;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    background: #fff;
+    width: 250px;
+    height: 44px;
+}
+
+#release input[type="text"]#titles:focus {
+    width: 300px;
+    outline: none;
+    background: #fff;
+    border-color: #f3f3f3;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+
+.hero-unit {
+	padding: 41px;
+}
+
+#editor {
+	max-height: 407px;
+	height: 550px;
+	background-color: white;
+	border-collapse: separate; 
+	border: 1px solid rgb(204, 204, 204); 
+	padding: 4px; 
+	box-sizing: content-box; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; 
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
+	overflow: scroll;
+	outline: none;
+}
+
+
+#voiceBtn {
+  width: 20px;
+  color: transparent;
+  background-color: transparent;
+  transform: scale(2.0, 2.0);
+  -webkit-transform: scale(2.0, 2.0);
+  -moz-transform: scale(2.0, 2.0);
+  border: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+div[data-role="editor-toolbar"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
+
+/* #release input#voiceBtn {
+	margin-right: 3px;
+} */
+
+#release #releaseBtn {
+	margin-left: 21%;
+}
+
+#release #releaseBtn button {
+	color: #dcd6d6;
+    font-size: 1px;
+    border-color: #ff0000;
+    background-color: #ff0000;
+}
+
+#release #releaseBtn button:HOVER {
+	color: #fff;
+	box-shadow: rgba(18, 14, 181, 0.7) 0 0 0.8em;
 }

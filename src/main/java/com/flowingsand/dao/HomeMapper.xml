@@ -11,7 +11,7 @@
 	<!-- 查询所有所有内容并分页 -->
 	<select id="selectAllArticlesByPage" resultType="article">
 		select
-		art.aid,art.title,art.author,art.atime,art.link,art.acontents from
+		art.aid,art.title,art.author,art.atime,art.acontents from
 		Article art
 		order by art.aid limit #{startPos},#{pageSize};
 	</select>
@@ -25,7 +25,7 @@
 	<!-- 查询当前登录用户内容并分页" -->
 	<select id="selectArticlesByPage" resultType="article">
 		select
-		art.aid,art.title,art.author,art.atime,art.link,art.acontents from
+		art.aid,art.title,art.author,art.atime,art.acontents from
 		Article art
 		where art.author=#{name} limit
 		#{startPos},#{pageSize}
@@ -35,14 +35,14 @@
 	<insert id="insertArticle" parameterType="article">
 		insert into
 		Article
-		(aid,title,author,atime,link,acontents) values
-		(#{article.aid},#{article.title},#{article.author},#{article.atime},#{article.link},#{article.acontents})
+		(aid,title,author,atime,acontents) values
+		(#{article.aid},#{article.title},#{article.author},#{article.atime},#{article.acontents})
 	</insert>
 	<!-- 根据id查询内容 -->
 	<select id="selectArticlesById" parameterType="java.lang.Integer"
 		resultType="article">
 		select
-		art.title,art.author,art.atime,art.link,art.acontents from Article art
+		art.title,art.author,art.atime,art.acontents from Article art
 		where art.aid = #{aid};
 	</select>
 	<!-- 根据用户名进行信息查询 -->

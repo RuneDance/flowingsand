@@ -83,7 +83,7 @@ $(document).ready(function() {
 		return false;
 	});
 	if($("#sessionId").val() == "admin"){
-		var html ="<li><a href='#send-messages' data-toggle='tab'>写消息</a></li>";
+		var html ="<li><a href='#send-messages' data-toggle='tab'>消息发布</a></li>";
 		$("section .container .row .nav-tabs").children().eq(2).after(html);
 		$("#send-messages").css("visibility","visible");
 	}
@@ -131,7 +131,7 @@ $(document).ready(function() {
 	});
     
 	
-	/*********************写消息*************************/
+	/*********************消息发送*************************/
 	
 	function SelectChange() {
 		$.ajax({
@@ -159,10 +159,51 @@ $(document).ready(function() {
 		SelectChange();
 	});
 	
+	
+	/**
+	 * 内容发布
+	 */
+	$("#releaseBtn button").click(function(){
+		var title=$.trim($("#titles").val());
+		var contents=$.trim($("#editor").html());
+		if(title ==""){
+			var tip = $("#titles").easytip({position : "top",class : "easy-red"});
+			tip.show("标题不能为空！");
+			return false;
+		}
+		if(contents ==""){
+			var tip = $("#editor").easytip({position : "top",class : "easy-red"});
+			tip.show("内容不能为空！");
+			return false;
+		}else{
+			$.ajax({
+				async:false,
+		        type:"POST",
+		        url:"relContents.html",
+		        dataType: "text",
+		        data:{
+		        	contents:contents,
+		        	title:title,
+		        	},
+		        success:function(data){
+		        	
+		        },  
+		        error:function(data){  
+		        	window.location.href="error.html";
+		        }
+			});
+		}
+	});
 });
 
+
+
+/*function dealContents(){
+	
+}*/
+
 /**
- * 修改密码
+ * 密码修改
  */
 function modifyPwd(){
 	var newPwd = $.trim($("#newPwd").val());
@@ -230,29 +271,6 @@ function modifyPwd(){
 }
 
 
-/**
- * 发布
- */
-function release(){
-	var title=$.trim($("#title").val());
-	var contents=$.trim($("#content").val());
-	if(title ==""){
-		var tip = $("#title").easytip({position : "top",class : "easy-red"});
-		tip.show("标题不能为空！");
-		return false;
-	}
-	if(title.length > 48){
-		var tip = $("#title").easytip({position : "top",class : "easy-red"});
-		tip.show("文章标题过长！");
-		return false;
-	}
-	if(contents ==""){
-		var tip = $("#content").easytip({position : "top",class : "easy-red"});
-		tip.show("内容不能为空！");
-		return false;
-	}
-	
-}
 
 /**
  * 发送消息

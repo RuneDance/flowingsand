@@ -15,8 +15,6 @@ public class Article implements Serializable {
 	private String author;
 	// 日期
 	private String atime;
-	// 链接
-	private String link;
 	// 内容
 	private String acontents;
 
@@ -50,14 +48,6 @@ public class Article implements Serializable {
 
 	public void setAtime(String atime) {
 		this.atime = atime;
-	}
-
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
 	}
 
 	public String getAcontents() {

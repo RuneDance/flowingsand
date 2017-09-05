@@ -75,10 +75,10 @@
 					</div>
 				</div>
 	
-				<div class="featured-media">
+				<%-- <div class="featured-media">
 					<img src='${item.link}' alt="图片" />
-					<%-- <a href='${item.link}' class="thumbnail"> <img src='${item.link}' alt="图片" /></a> --%>
-				</div>
+					<a href='${item.link}' class="thumbnail"> <img src='${item.link}' alt="图片" /></a>
+				</div> --%>
 				<div class="post-content">
 					${item.acontents}
 				</div>
