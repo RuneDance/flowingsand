@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,6 +32,7 @@ import com.flowingsand.entity.Article;
 import com.flowingsand.entity.Message;
 import com.flowingsand.service.HomeService;
 import com.flowingsand.utils.Global;
+import com.flowingsand.utils.MessageDigestTools;
 import com.flowingsand.utils.OSinfo;
 
 @Controller
@@ -98,13 +98,12 @@ public class HomeController extends BaseController {
 	 */
 	@RequestMapping(value = "/relContents", method = RequestMethod.POST)
 	@ResponseBody
-	public ModelAndView relContents(Article article, HttpServletRequest request,
+	public String relContents(Article article, HttpServletRequest request,
 			@RequestParam(value = "contents", required = false) String contents,
 			@RequestParam(value = "title", required = false) String title) throws Exception {
 		OutputStream out;
 		String userName = (String) request.getSession().getAttribute("sname");
 		String ostype = OSinfo.getOSname().toString();
-		String uuid = UUID.randomUUID().toString();
 		String uploadTime = df.format(new Date());
 		String regExpImg = "<img\\ssrc=\"\\S*\">";
 		ArrayList<String> lists=new ArrayList<String>();
@@ -113,52 +112,57 @@ public class HomeController extends BaseController {
 		while (matcher.find()) {
 			lists.add(matcher.group());
         }
-		for (String list : lists) {
-			String encodeVal=list.split("\"")[1].split(",")[1];
-			String substr = list.split("\"")[1].split(",")[0];
-			String origFileName=substr.substring(substr.indexOf("/")+1, substr.indexOf(";"));
-			String rename = userName + uploadTime + uuid + "." + origFileName;
-			 byte[] b = Base64.decodeBase64(encodeVal);
-			 //调整异常数据
-			 for(int i=0;i<b.length;++i){
-				 if(b[i]<0){
-					 b[i]+=256;
-	             }
-			 }
-			 if (ostype.equals("Windows")) {
+		if(lists.size() >0){
+			for (String list : lists) {
+				String encodeVal=list.split("\"")[1].split(",")[1];
+				String substr = list.split("\"")[1].split(",")[0];
+				String md5Res = MessageDigestTools.encryptMD5(encodeVal.getBytes());
+				String origFileName=substr.substring(substr.indexOf("/")+1, substr.indexOf(";"));
+				String rename = userName + uploadTime + md5Res + "." + origFileName;
+				byte[] b = Base64.decodeBase64(encodeVal);
+				//调整异常数据
+				for(int i=0;i<b.length;++i){
+					if(b[i]<0){
+						b[i]+=256;
+					}
+				}
+				if (ostype.equals("Windows")) {
 					File file = new File(Global.URL_WINDOWS);
 					if (!file.exists()) {
 						file.mkdirs();
-						file.renameTo(new File(Global.URL_WINDOWS+"/attaches"));
+						file.renameTo(new File(Global.URL_WINDOWS));
 					}
 					//生成图片到本地
 					out = new FileOutputStream(Global.URL_WINDOWS + rename);
 					out.write(b);
 					out.flush();
 					out.close();
-					article.setAcontents(contents.replace(list,"<img src="+ "http://localhost/" + Global.URL_WINDOWS + rename + "/>"));
+					contents = contents.replace(list,"<img src="+ "http://localhost//attaches/" + rename + "/>");
 				} else if (ostype.equals("Linux")) {
 					File file = new File(Global.URL_LINUX);
 					if (!file.exists()) {
 						file.mkdirs();
-						file.renameTo(new File(Global.URL_LINUX + "/attaches"));
+						file.renameTo(new File(Global.URL_LINUX));
 					}
 					//生成图片到本地
 					out = new FileOutputStream(Global.URL_LINUX + rename);
 					out.write(b);
 					out.flush();
 					out.close();
-					article.setAcontents(contents.replace(list,"<img src=" +"http://flowingsand.com/"+ Global.URL_LINUX + rename + "/>"));
+					contents = contents.replace(list,"<img src=" +"http://flowingsand.com//home/attaches/" + rename + "/>");
 				}
+				
+			}
 		}
+		article.setAcontents(contents);
 		article.setTitle(title);
 		article.setAtime(uploadTime);
 		article.setAuthor(userName);
 		int result = homeService.insertContents(article);
 		if (result == 1) {
-			return new ModelAndView("redirect:/home.html");
+			return "relSucc";
 		} else {
-			return new ModelAndView("redirect:/setting.html");
+			return "relFail";
 		}
 
 	}

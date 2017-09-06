@@ -186,7 +186,11 @@ $(document).ready(function() {
 		        	title:title,
 		        	},
 		        success:function(data){
-		        	
+		        	if(data == "relSucc"){
+		        		window.location.href="home.html";
+		        	}else{
+		        		window.location.href="setting.html";
+		        	}
 		        },  
 		        error:function(data){  
 		        	window.location.href="error.html";
@@ -197,10 +201,6 @@ $(document).ready(function() {
 });
 
 
-
-/*function dealContents(){
-	
-}*/
 
 /**
  * 密码修改
