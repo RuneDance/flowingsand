@@ -59,11 +59,23 @@ public class HomeController extends BaseController {
 		return "user";
 	}
 	
+	/**
+	 * 查看全文内容
+	 */
 	@RequestMapping(value = "/showdetails")
 	@ResponseBody
 	public String showDetails(HttpServletRequest request,@RequestParam(value = "aid", required = false) Integer aid) {
 		HttpSession session = request.getSession();
 		article=this.homeService.showArticlesDetails(aid);
+		if(article !=null){
+			for (Article lists : article) {
+				try {
+					lists.setAtime(sdf.format(df.parse(lists.getAtime())));
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		session.setAttribute("adetails", article);
 		return "showok";
 	}
@@ -102,6 +114,7 @@ public class HomeController extends BaseController {
 			@RequestParam(value = "contents", required = false) String contents,
 			@RequestParam(value = "title", required = false) String title) throws Exception {
 		OutputStream out;
+		String linkstr="";
 		String userName = (String) request.getSession().getAttribute("sname");
 		String ostype = OSinfo.getOSname().toString();
 		String uploadTime = df.format(new Date());
@@ -137,7 +150,10 @@ public class HomeController extends BaseController {
 					out.write(b);
 					out.flush();
 					out.close();
-					contents = contents.replace(list,"<img src="+ "http://localhost//attaches/" + rename + "/>");
+					contents = contents.replace(list,"<img src="+"'"+ "http://localhost//attaches/" + rename +"'"+ "/>");
+					if(linkstr ==""){
+						linkstr="http://localhost//attaches/" + rename;
+					}
 				} else if (ostype.equals("Linux")) {
 					File file = new File(Global.URL_LINUX);
 					if (!file.exists()) {
@@ -149,15 +165,23 @@ public class HomeController extends BaseController {
 					out.write(b);
 					out.flush();
 					out.close();
-					contents = contents.replace(list,"<img src=" +"http://flowingsand.com//home/attaches/" + rename + "/>");
+					contents = contents.replace(list,"<img src=" +"'"+"http://flowingsand.com//home/attaches/" + rename +"'"+ "/>");
+					if(linkstr ==""){
+						linkstr="http://flowingsand.com//home/attaches/" + rename;
+					}
 				}
 				
 			}
 		}
-		article.setAcontents(contents);
 		article.setTitle(title);
-		article.setAtime(uploadTime);
 		article.setAuthor(userName);
+		article.setAtime(uploadTime);
+		if(linkstr !=""){
+			article.setLink(linkstr);
+		}else{
+			article.setLink("http://flowingsand.com/images/temporary.jpg");
+		}
+		article.setAcontents(contents);
 		int result = homeService.insertContents(article);
 		if (result == 1) {
 			return "relSucc";

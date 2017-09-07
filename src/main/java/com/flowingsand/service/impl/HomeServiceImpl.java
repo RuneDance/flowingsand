@@ -1,5 +1,8 @@
 package com.flowingsand.service.impl;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,19 +28,18 @@ import com.flowingsand.service.HomeService;
 public class HomeServiceImpl implements HomeService {
 	@Autowired
 	IHomeDao iHomeDao;
-
+	DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+	DateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
 	/**
 	 * 查询所有用户内容并分页
 	 */
 	@Override
 	public List<Article> showAllArticlesByPage(HttpServletRequest request,
 			Model model) {
-
 		Page page = null;
 		List<Article> articles;
 		HttpSession session = request.getSession();
 		String pageNow = request.getParameter("pageNow");
-
 		Integer totalCount = iHomeDao.selectAllCount();
 		if (totalCount != null) {
 			session.setAttribute("counts", totalCount);
@@ -48,11 +50,18 @@ public class HomeServiceImpl implements HomeService {
 					page.getStartPos(), page.getPageSize());
 		} else {
 			page = new Page(totalCount, 1);
-			articles = this.iHomeDao.selectAllArticlesByPage(
-					page.getStartPos(), page.getPageSize());
+			articles = this.iHomeDao.selectAllArticlesByPage(page.getStartPos(), page.getPageSize());
 		}
 		model.addAttribute("page", page);
 		if (articles != null) {
+			for (Article lists : articles) {
+				try {
+					lists.setAtime(sdf.format(df.parse(lists.getAtime())));
+					lists.setAcontents(lists.getAcontents().replaceAll("<[^<>]*>", ""));
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+			}
 			session.setAttribute("articles", articles);
 			return (List<Article>) articles;
 		} else {
@@ -75,12 +84,10 @@ public class HomeServiceImpl implements HomeService {
 	@Override
 	public List<Article> showArticlesByPage(HttpServletRequest request,
 			Model model, String name) {
-
 		Page page = null;
 		List<Article> articles;
 		HttpSession session = request.getSession();
 		String pageNow = request.getParameter("pageNow");
-
 		Integer totalCount = iHomeDao.selectCountByAuthor(name);
 		if (totalCount != null) {
 			session.setAttribute("counts", totalCount);
@@ -96,6 +103,14 @@ public class HomeServiceImpl implements HomeService {
 		}
 		model.addAttribute("page", page);
 		if (articles != null) {
+			for (Article lists : articles) {
+				try {
+					lists.setAtime(sdf.format(df.parse(lists.getAtime())));
+					lists.setAcontents(lists.getAcontents().replaceAll("<[^<>]*>", ""));	
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+			}
 			session.setAttribute("articles", articles);
 			return (List<Article>) articles;
 		} else {

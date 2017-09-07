@@ -124,11 +124,11 @@
 				</div>
 			</div>
 			
-			<%-- <div class="featured-media">
+			<div class="featured-media">
 				<a href='${item.link}' class="thumbnail">
 					<img src='${item.link}' alt="图片" />
 				</a>
-			</div> --%>
+			</div>
 			<div class="post-content">
 				<c:if test="${fn:length(item.acontents)>'121'}">
 					<p>${item.acontents.substring(0,121)} ……</p>
@@ -140,8 +140,7 @@
 			<div class="post-permalink">
 				<span class="btn btn-default">阅读全文</span>
 			</div>
-			<footer class="post-footer clearfix">
-			</footer>
+			<footer class="post-footer clearfix"></footer>
 			</article> 
 			</c:forEach>
 			
@@ -177,7 +176,8 @@
 		                </a>  
 		            </c:when>
 		        </c:choose>
-			</nav> 
+			</nav>
+			<!-- 分页 -->
 			</main>
 			
 			<aside class="col-md-4 sidebar">
@@ -200,6 +200,8 @@
 		</div>
 	</div>
 	</section>
+	
+	
 	
 	
 	<!-- Footer -->
