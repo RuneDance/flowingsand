@@ -174,6 +174,15 @@ public class HomeServiceImpl implements HomeService {
 			return null;
 		}
 	}
+	
+	/**
+	 * 根据用户名进行邮箱查询
+	 */
+	@Override
+	public String selectEmailByUname(String name) {
+		String email=iHomeDao.selectEmailByUname(name);
+		return email;
+	}
 
 
 

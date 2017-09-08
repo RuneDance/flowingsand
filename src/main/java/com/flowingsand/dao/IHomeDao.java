@@ -44,4 +44,7 @@ public interface IHomeDao {
 	
 	// 根据Id进行消息查询
 	public List<Message> selectMessagesById(Integer id);
+	
+	// 根据用户名进行邮箱查询
+	public String selectEmailByUname(String name);
 }

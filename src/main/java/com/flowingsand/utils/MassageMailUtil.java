@@ -12,17 +12,21 @@ import com.sun.mail.util.MailSSLSocketFactory;
 
 
 /**
- * 邮件工具
+ * 消息邮件工具
  * @author v
  *
  */
-public class MailUtil implements Runnable {
-    private String email;// 收件人邮箱
-    private String code;// 激活码
-
-    public MailUtil(String email, String code) {
+public class MassageMailUtil implements Runnable {
+	// 收件人邮箱
+    private String email;
+    // 日期
+    private String date;
+    // 消息内容
+    private String content;
+    public MassageMailUtil(String email, String date, String content) {
         this.email = email;
-        this.code = code;
+        this.content = content;
+        this.date = date;
     }
 
     public void run() {
@@ -56,9 +60,9 @@ public class MailUtil implements Runnable {
             // 2.2设置接收人
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
             // 2.3设置邮件主题
-            message.setSubject("验证码消息");
+            message.setSubject("系统消息");
             // 2.4设置邮件内容
-            message.setContent(GlobalStaticHtml.EMAILCONTENTSSTART+code+GlobalStaticHtml.EMAILCONTENTSEND, "text/html;charset=UTF-8");
+            message.setContent(GlobalStaticHtml.EMAILMESSAGESTART +date+ GlobalStaticHtml.EMAILMESSAGECENTER +content+ GlobalStaticHtml.EMAILMESSAGEEND, "text/html;charset=UTF-8");
             // 3.发送邮件
             Transport.send(message);
         } catch (Exception e) {

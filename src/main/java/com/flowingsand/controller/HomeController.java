@@ -32,6 +32,7 @@ import com.flowingsand.entity.Article;
 import com.flowingsand.entity.Message;
 import com.flowingsand.service.HomeService;
 import com.flowingsand.utils.Global;
+import com.flowingsand.utils.MassageMailUtil;
 import com.flowingsand.utils.MessageDigestTools;
 import com.flowingsand.utils.OSinfo;
 
@@ -257,15 +258,20 @@ public class HomeController extends BaseController {
 	 */
 	@RequestMapping(value = "/sendmessages")
 	public String sendMessages(Message message, HttpServletRequest request){
-		message.setMname(request.getParameter("mname"));
-		message.setMtime(df.format(new Date()));
-		message.setMessages(request.getParameter("messages"));
-		
+		String uname = request.getParameter("mname");
+		String mess = request.getParameter("messages");
+		Date date=new Date();
+		message.setMname(uname);
+		message.setMtime(df.format(date));
+		message.setMessages(mess);
 		int res = homeService.insertMessages(message);
 		if(res ==1){
+			String email = homeService.selectEmailByUname(uname);
+			if(email !="" && mess !=""){
+				new Thread(new MassageMailUtil(email, sdf.format(date) , mess)).start();
+			}
 			return "setting";
 		}else{
-			new Exception();
 			return "error";
 		}
 	}

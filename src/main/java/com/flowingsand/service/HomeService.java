@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
-import com.flowingsand.entity.Accounts;
 import com.flowingsand.entity.Article;
 import com.flowingsand.entity.Message;
 
@@ -82,4 +81,11 @@ public interface HomeService {
 	 * @return
 	 */
 	public List<Message> showMessageDetails(Integer id);
+	
+	/**
+	 * 根据用户名进行邮箱查询
+	 * @param name
+	 * @return
+	 */
+	public String selectEmailByUname(String name);
 }

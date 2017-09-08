@@ -73,4 +73,11 @@
 	<select id="selectMessagesById" parameterType="java.lang.Integer" resultType="message">
 		select mes.mid,mes.mname,mes.mtime,mes.messages from Message mes where mes.mid=#{id} order by mes.mid;
 	</select>
+	<!-- 根据用户名进行邮箱查询 -->
+	<select id="selectEmailByUname" parameterType="java.lang.String" resultType="String">
+		select
+		acc.email from Accounts acc
+		where acc.uname = #{name};
+	</select>
+	
 </mapper>
