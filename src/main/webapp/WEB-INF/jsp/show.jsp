@@ -26,10 +26,6 @@
 <link
 	href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css"
 	rel="stylesheet">
-<!-- font-awesome.min.css -->
-<link
-	href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
 <link href="frontstageresource/css/show.css" rel="stylesheet" type="text/css">
 
 <!-- jquery.min.js -->
@@ -43,21 +39,19 @@
 <!-- freelancer.min.js -->
 <script
 	src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
-<!-- ProgressBar.js -->
-<script type="text/javascript" src="js/ProgressBar.js"></script>
 <script src="frontstageresource/js/show.js" type="text/javascript"></script>
 
 </head>
 <body>
 	<!-- 导航条 -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"> 
-			<img id="fslogo" class="img-responsive" src="indexresource/img/flowingsand.gif" alt="">
-			</a>
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"> 
+				<img id="fslogo" class="img-responsive" src="indexresource/img/flowingsand.gif" alt="">
+				</a>
+			</div>
 		</div>
-	</div>
 	</nav>
 
 	<!-- 内容 -->
@@ -74,14 +68,35 @@
 						<time class="post-date" datetime='${item.atime}' title='${item.atime}'>${item.atime}</time>
 					</div>
 				</div>
+				<hr>
+				
+				<blockquote>
+					<pre class="language-clike">
+						<code class=" language-clike">
+						
+						</code>
+					</pre>
+				</blockquote>
+				
 				<div class="post-content">
 					${item.acontents}
 				</div>
 			</article>
 			</c:forEach>
 			</main>
+			<div class="asset-footer text-center">
+				<span>版权声明(自由转载、非商用)</span>
+				<hr>
+				<p>1、本文只适合那些偶尔用到这些软件的非专业工作者。</p>
+				<p>2、本文只适合那些偶尔用到这些软件的非专业工作者。</p>
+			</div>
 		</div>
 	</div>
 	</section>
+	<footer class="text-center">
+		<div class="foot">
+			<div class="end">All Rights Reserved.备案号：闽ICP备00000000号-1</div>
+		</div>
+	</footer>
 </body>
 </html>
