@@ -69,15 +69,6 @@
 					</div>
 				</div>
 				<hr>
-				
-				<blockquote>
-					<pre class="language-clike">
-						<code class=" language-clike">
-						
-						</code>
-					</pre>
-				</blockquote>
-				
 				<div class="post-content">
 					${item.acontents}
 				</div>

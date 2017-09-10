@@ -47,8 +47,13 @@ public class HomeController extends BaseController {
 	DateFormat sdfn = new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
 	
 	@RequestMapping(value = "/show")
-	public String initialShow() {
-		return "show";
+	public ModelAndView initialShow(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if(session.getAttribute("adetails") !=null){
+			return new ModelAndView("show");
+		}else{
+			return new ModelAndView("redirect:/home.html");
+		}
 	}
 	
 	@RequestMapping(value = "/messageshow")
