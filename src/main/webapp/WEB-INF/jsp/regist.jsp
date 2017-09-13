@@ -15,22 +15,20 @@
     <meta name="twitter:title" content="Simple, Economical Client Documents" />
     <meta name="twitter:description" content="A web service for generating & publishing professional emails, PDFs, DOCXs, etc by merging templates & data. Manage your company's outgoing mail with ease." />
     <meta name="twitter:image" content="http://www.echopublish.com/img/paper-plane.png" />
-
-<!-- bootstrap.min.css -->
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- easyform.css -->
-<link rel="stylesheet" href="css/easyform.css">
-<link href="frontstageresource/css/regist.css" rel="stylesheet" type="text/css">
-
-<!-- jquery.min.js -->
-<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<!--引入 easyform.js-->
-<script type="text/javascript" src="js/easyform.js"></script>
-<!-- bootstrap.min.js -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- ProgressBar.js -->
-<script type="text/javascript" src="js/ProgressBar.js"></script>
-<script src="frontstageresource/js/regist.js" type="text/javascript"></script>
+	<!-- bootstrap.min.css -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- easyform.css -->
+	<link rel="stylesheet" href="css/easyform.css">
+	<link href="frontstageresource/css/regist.css" rel="stylesheet" type="text/css">
+	<!-- jquery.min.js -->
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<!--引入 easyform.js-->
+	<script type="text/javascript" src="js/easyform.js"></script>
+	<!-- bootstrap.min.js -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- ProgressBar.js -->
+	<script type="text/javascript" src="js/ProgressBar.js"></script>
+	<script src="frontstageresource/js/regist.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="vader"></div>

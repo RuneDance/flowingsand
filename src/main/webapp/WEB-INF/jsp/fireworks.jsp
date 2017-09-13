@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
 <!--引入 jquery.js-->
-<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/fireworks.js"></script>
 </head>
 <body>

@@ -24,6 +24,24 @@ section {
 }
 
 /*=====================资料设置==========================*/
+#profile_set #editpwdForm h4{
+	margin: 40px auto 80px auto;
+}
+
+#profile_set input[type="text"]#signature {
+    border-radius: 8px;
+	margin: 80px auto 80px auto;
+    border: 1px solid #f3f3f3;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    background: #fff;
+    height: 44px;
+}
+
 #profile_set button[type="submit"] {
 	padding: 10px 15px;
     background-color: #003ef8;
@@ -36,6 +54,7 @@ section {
     font-weight:bolder;
     -webkit-transition-duration: 0.25s;
 	transition-duration: 0.25s;
+	margin: 40px auto auto auto;
 	box-shadow: inset 0 3px 10px rgba(242, 241, 246, 0.4);
 }
 
@@ -200,7 +219,7 @@ textarea#messages-acontents{
 /*=================================内容发布=================================*/
 #release input[type="text"]#titles {
     border-radius: 8px;
-    margin: 0 auto 0px auto;
+    margin: 6px auto 6px auto;
     border: 1px solid #f3f3f3;
     color: #000;
     font-size: 16px;
@@ -209,12 +228,12 @@ textarea#messages-acontents{
     display: block;
     text-align: center;
     background: #fff;
-    width: 250px;
+    width: 95%;
     height: 44px;
 }
 
 #release input[type="text"]#titles:focus {
-    width: 300px;
+    width: 100%;
     outline: none;
     background: #fff;
     border-color: #f3f3f3;
@@ -223,7 +242,7 @@ textarea#messages-acontents{
 
 
 .hero-unit {
-	padding: 41px;
+	padding: 1px 20px;
 }
 
 #editor {
@@ -266,10 +285,6 @@ div[data-role="editor-toolbar"] {
 .dropdown-menu a {
   cursor: pointer;
 }
-
-/* #release input#voiceBtn {
-	margin-right: 3px;
-} */
 
 #release #releaseBtn {
 	margin-left: 21%;

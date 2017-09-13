@@ -113,9 +113,9 @@ a:active, a:focus, a img {
 
 /*================foot===========================*/
 .foot {
-	padding: 16px 0;
 	color: #000;
+	padding: 16px 0;
 	font-size: 12px;
-	background: #f5f5d5;
+	background: #d0d0ad;
 	border-top: 1px solid #d0cead;
 }

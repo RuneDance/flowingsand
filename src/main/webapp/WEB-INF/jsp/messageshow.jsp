@@ -9,27 +9,25 @@
 	<meta name="keywords" content="RSS,阅读,RSS订阅,流沙">
 	<meta name="description" content="专注于内容订阅">
 	<meta name="twitter:image" content="http://www.echopublish.com/img/paper-plane.png" />
-
     <!-- bootstrap.min.css -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- easyform.css -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- easyform.css -->
 	<link rel="stylesheet" href="css/easyform.css">
     <!-- freelancer.min.css -->
-    <link href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
     <!-- font-awesome.min.css -->
-    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="frontstageresource/css/messageshow.css" type="text/css">
-    
     <!-- jquery.min.js -->
-    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <!-- bootstrap.min.js -->
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--引入 easyform.js-->
 	<script type="text/javascript" src="js/easyform.js"></script>
     <!-- easing.min.js -->
-    <script src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- freelancer.min.js -->
-    <script src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
+    <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
 	<script type="text/javascript" src="frontstageresource/js/messageshow.js"></script>
 <title>显示消息</title>
 </head>

@@ -6,9 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="frontstageresource/css/success.css">
 <link rel="stylesheet" type="text/css" href="css/ProgressBar.css">
-
 <!--引入 jquery.js-->
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/ProgressBar.js"></script>
 <script type="text/javascript" src="frontstageresource/js/success.js"></script>
 <title>成功</title>

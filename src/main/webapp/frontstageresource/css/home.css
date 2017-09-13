@@ -8,8 +8,6 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
 		"Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI",
 		"Microsoft YaHei", sans-serif;
-		/* font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB",
-		"Droid Sans Fallback", "Microsoft YaHei", sans-serif; */
 }
 
 #logo img {
@@ -75,8 +73,9 @@ h2 {
 }
 
 a {
-	color: #f4645f;
-	outline: none;
+	color: #424141;
+    outline: none;
+    font-size: 16px;
 }
 
 a:hover {
@@ -149,10 +148,11 @@ a:active, a:focus, a img {
 
 .post .post-head .post-title {
 	margin: 0;
-	font-size: 1.8em;
-	text-indent:2em;
-	line-height: 1.2em;
 	color: #000;
+	font-size: 1.8em;
+	text-indent: 2em;
+	line-height: 1.2em;
+	text-transform: none;
 }
 
 .post .post-head .post-meta {
@@ -238,7 +238,7 @@ a:active, a:focus, a img {
     border: 1px solid #cec0c0;
     border-radius: 4px;
 }
-
+/*===============widget======================*/
 .widget {
 	margin-bottom: 35px;
 }
@@ -247,10 +247,38 @@ a:active, a:focus, a img {
 	border-color: #d0cead; 
 }
 
-.widget .communion {
-	font-size: 16px;
-	color: #959595;
-	text-indent: 1.5em;
+.widget table tr th .community {
+	padding-left: 7.5%;
+}
+
+.widget table tr th .community a{
+	text-decoration: none;
+}
+
+.widget table tr th label{
+	font-size: 15px;
+    color: #807676;
+    font-weight: 500;
+    text-indent: 0.5em;
+}
+
+.widget table tr th p{
+	font-size: 14px;
+	color: #807676;
+	font-weight: 500;
+}
+
+.widget table tr th .showimgs{
+	padding-left: 115px;
+    padding-top: 8.7%;
+}
+.widget table tr th .showimgs img{
+    width: 86px;
+	height: auto;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: #fff;
+	border: 1px solid #e3dede
 }
 /*==================footer===================*/
 .footer-above .row .list-inline li a {

@@ -16,23 +16,23 @@
     <meta name="twitter:description" content="A web service for generating & publishing professional emails, PDFs, DOCXs, etc by merging templates & data. Manage your company's outgoing mail with ease." />
     <meta name="twitter:image" content="http://www.echopublish.com/img/paper-plane.png" />
 <title>首 页</title>
-<!-- bootstrap.min.css -->
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- freelancer.min.css -->
-<link href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
-<!-- font-awesome.min.css -->
-<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="frontstageresource/css/home.css">
+	<!-- bootstrap.min.css -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- freelancer.min.css -->
+    <link href="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
+    <!-- font-awesome.min.css -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="frontstageresource/css/home.css">
 
-<!-- jquery.min.js -->
-<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<!-- bootstrap.min.js -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- easing.min.js -->
-<script src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- freelancer.min.js -->
-<script src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
-<script type="text/javascript" src="frontstageresource/js/home.js"></script>
+	<!-- jquery.min.js -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- easing.min.js -->
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- freelancer.min.js -->
+    <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
+	<script type="text/javascript" src="frontstageresource/js/home.js"></script>
 <% 
 	String sname="";
 	if(session.getAttribute("sname") != null){
@@ -130,10 +130,10 @@
 				</a>
 			</div>
 			<div class="post-content">
-				<c:if test="${fn:length(item.acontents)>'121'}">
-					<p>${item.acontents.substring(0,121)} ……</p>
+				<c:if test="${fn:length(item.acontents)>'221'}">
+					<p>${item.acontents.substring(0,221)} ……</p>
 				</c:if>
-				<c:if test="${fn:length(item.acontents)<='121'}">
+				<c:if test="${fn:length(item.acontents)<='221'}">
 					<p>${item.acontents}</p>
 				</c:if>
 			</div>
@@ -183,15 +183,25 @@
 			<aside class="col-md-4 sidebar">
                 
 	<!-- start tag cloud widget -->
-	<div class="widget">
-		<h4 class="title text-center">社区</h4>
+	<div class="widget text-center">
+		<h4 class="title">社区交流</h4>
 		<hr/>
-		<div class="content community">
-			<p class="communion">与我们交流</p>
-			<p><a href="#" title="Ghost中文网问答社区" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i> 问答社区</a></p>
-			<p><a href="#" title="Ghost中文网官方微博" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i class="fa fa-weibo"></i> 官方微博</a></p>
-			<p><a href="#" title="Ghost中文网官方qq" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方qq群'])"><i class="fa fa-qq"></i> 官方qq群</a></p>
-		</div>
+		<table>
+		  <tr>
+		    <th>
+		    	<div class="community">
+					<label>与我们交流</label>
+					<p><a href="#" title="官方微博"><i class="fa fa-weibo"></i> 官方微博</a></p>
+					<p><a href="#" title="网问答微信"><i class="fa fa-comments"></i> 问答社区</a></p>
+					<p><a href="#" title="网官方qq"><i class="fa fa-qq"></i> 官方qq群</a></p>
+				</div>
+		    </th>
+		    <th>
+		    	<div class="showimgs"><img alt="" src="frontstageresource/img/erweima.png"></div>
+		    </th>
+		  </tr>
+		</table>
+		
 	</div>
 	<!-- end tag cloud widget -->	
 
@@ -256,7 +266,7 @@
 	        <div class="row-content col-lg-2 col-sm-4 col-xs-6">
 	            <h3>最新消息</h3>
 	            <ul>
-	                <li><a href="#">About</a></li>
+	                <li><a href="#">关于</a></li>
 	                <li><a href="#">Why One Page?</a></li>
 	                <li><a href="#">OPL Blog</a></li>
 	            </ul>

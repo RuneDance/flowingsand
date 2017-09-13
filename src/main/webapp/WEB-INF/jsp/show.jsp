@@ -15,32 +15,21 @@
 	content="A web service for generating & publishing professional emails, PDFs, DOCXs, etc by merging templates & data. Manage your company's outgoing mail with ease." />
 <meta name="twitter:image"
 	content="http://www.echopublish.com/img/paper-plane.png" />
-
-
 <title>阅 读</title>
-
-<!-- bootstrap.min.css -->
-<link rel="stylesheet"
-	href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- freelancer.min.css -->
-<link
-	href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css"
-	rel="stylesheet">
-<link href="frontstageresource/css/show.css" rel="stylesheet" type="text/css">
-
-<!-- jquery.min.js -->
-<script type="text/javascript"
-	src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<!-- bootstrap.min.js -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- easing.min.js -->
-<script
-	src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- freelancer.min.js -->
-<script
-	src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
-<script src="frontstageresource/js/show.js" type="text/javascript"></script>
-
+	<!-- bootstrap.min.css -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- freelancer.min.css -->
+	<link href="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
+	<link href="frontstageresource/css/show.css" rel="stylesheet" type="text/css">
+	<!-- jquery.min.js -->
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<!-- bootstrap.min.js -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- easing.min.js -->
+	<script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<!-- freelancer.min.js -->
+	<script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
+	<script src="frontstageresource/js/show.js" type="text/javascript"></script>
 </head>
 <body>
 	<!-- 导航条 -->

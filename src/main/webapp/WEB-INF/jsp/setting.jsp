@@ -12,26 +12,24 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-combined.no-icons.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <!-- bootstrap.min.css -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- easyform.css -->
 	<link rel="stylesheet" href="css/easyform.css">
     <!-- freelancer.min.css -->
-    <link href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
     <link rel="stylesheet" href="frontstageresource/css/setting.css" type="text/css">
-    
-    
     <!-- jquery.min.js -->
-    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <!-- bootstrap.min.js -->
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-wysiwyg.js"></script>
     <script type="text/javascript" src="js/jquery.hotkeys.js"></script>
     <!--引入 easyform.js-->
 	<script type="text/javascript" src="js/easyform.js"></script>
     <!-- freelancer.min.js -->
-    <script src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
+    <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
 	<script type="text/javascript" src="frontstageresource/js/setting.js"></script>
 	<% 
 		String sname="";
@@ -149,11 +147,11 @@
 						<div class="container">
 							<div class="row text-center">
 								<form id="editpwdForm" role="form" method="post" action="" class="col-xs-12">
-									<h4>修改个人资料</h4>
+									<h4>修改签名</h4>
 									<div class="form-group">
-										<input name="signature" type="text" class="form-control" value="这个人很懒，什么也没留下～～～～" placeholder="个性签名">
+										<input id="signature" name="signature" type="text" class="form-control" value="这个人很懒，什么也没留下～～～～" placeholder="个性签名">
 									</div>
-									<button type="submit" class="btn btn-primary">保存</button>
+									<button type="submit" class="btn btn-primary">保 存</button>
 								</form>
 							</div>
 						</div>

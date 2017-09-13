@@ -20,28 +20,22 @@
 <meta http-equiv="description" content="This is my page">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- bootstrap.min.css -->
-<link rel="stylesheet"
-	href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- freelancer.min.css -->
-<link
-	href="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css"
-	rel="stylesheet">
-<!-- font-awesome.min.css -->
-<link
-	href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css"
-	href="frontstageresource/css/about.css">
-<!-- jquery.min.js -->
-<script type="text/javascript"
-	src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<!-- bootstrap.min.js -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- easing.min.js -->
-<script src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- freelancer.min.js -->
-<script src="http://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
-<script type="text/javascript" src="frontstageresource/js/about.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- freelancer.min.css -->
+    <link href="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/css/freelancer.min.css" rel="stylesheet">
+	<!-- font-awesome.min.css -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="frontstageresource/css/about.css">
+	
+	<!-- jquery.min.js -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<!-- bootstrap.min.js -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- easing.min.js -->
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<!-- freelancer.min.js -->
+    <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
+	<script type="text/javascript" src="frontstageresource/js/about.js"></script>
 </head>
 
 <body>
