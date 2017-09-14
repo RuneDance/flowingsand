@@ -155,6 +155,11 @@ a:active, a:focus, a img {
 	text-transform: none;
 }
 
+.post .post-head .post-title:HOVER{
+	color: #f73b3b;
+	cursor: pointer;
+}
+
 .post .post-head .post-meta {
 	color: #959595;
 	margin: 14px 0 0px;
@@ -247,12 +252,12 @@ a:active, a:focus, a img {
 	border-color: #d0cead; 
 }
 
-.widget table tr th .community {
-	padding-left: 7.5%;
-}
-
 .widget table tr th .community a{
 	text-decoration: none;
+}
+
+.widget table tr th .community a:HOVER{
+	cursor: pointer;
 }
 
 .widget table tr th label{
@@ -273,7 +278,7 @@ a:active, a:focus, a img {
     padding-top: 8.7%;
 }
 .widget table tr th .showimgs img{
-    width: 86px;
+    width: 88px;
 	height: auto;
     padding: 3px;
     border-radius: 4px;

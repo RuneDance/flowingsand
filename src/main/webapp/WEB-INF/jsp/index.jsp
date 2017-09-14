@@ -110,7 +110,10 @@
             </div>
 		</div>
 	</section>
-
+	
+	
+	
+	
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
@@ -203,10 +206,6 @@
         	<div class="end">All Rights Reserved.备案号：闽ICP备00000000号-1</div>
         </div>
     </footer>
-
-    
-
-    
     
 </body>
 </html>

@@ -191,13 +191,13 @@
 		    <th>
 		    	<div class="community">
 					<label>与我们交流</label>
-					<p><a href="#" title="官方微博"><i class="fa fa-weibo"></i> 官方微博</a></p>
-					<p><a href="#" title="网问答微信"><i class="fa fa-comments"></i> 问答社区</a></p>
-					<p><a href="#" title="网官方qq"><i class="fa fa-qq"></i> 官方qq群</a></p>
+					<p><a title="weibo"><i class="fa fa-weibo"></i> 官方微博</a></p>
+					<p><a title="weichat"><i class="fa fa-comments"></i> 官方微信</a></p>
+					<p><a title="qq"><i class="fa fa-qq"></i> 官方qq群</a></p>
 				</div>
 		    </th>
 		    <th>
-		    	<div class="showimgs"><img alt="" src="frontstageresource/img/erweima.png"></div>
+		    	<div class="showimgs"><img alt="" src="frontstageresource/img/qq.png"></div>
 		    </th>
 		  </tr>
 		</table>

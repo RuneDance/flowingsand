@@ -156,9 +156,9 @@ public class HomeController extends BaseController {
 					out.write(b);
 					out.flush();
 					out.close();
-					contents = contents.replace(list,"<img src="+"'"+ "http://localhost//attaches/" + rename +"'"+ "/>");
+					contents = contents.replace(list,"<img src="+"'"+ "https://localhost//attaches/" + rename +"'"+ "/>");
 					if(linkstr ==""){
-						linkstr="http://localhost//attaches/" + rename;
+						linkstr="https://localhost//attaches/" + rename;
 					}
 				} else if (ostype.equals("Linux")) {
 					File file = new File(Global.URL_LINUX);
@@ -171,9 +171,9 @@ public class HomeController extends BaseController {
 					out.write(b);
 					out.flush();
 					out.close();
-					contents = contents.replace(list,"<img src=" +"'"+"http://flowingsand.com//home/attaches/" + rename +"'"+ "/>");
+					contents = contents.replace(list,"<img src=" +"'"+"https://flowingsand.com//home/attaches/" + rename +"'"+ "/>");
 					if(linkstr ==""){
-						linkstr="http://flowingsand.com//home/attaches/" + rename;
+						linkstr="https://flowingsand.com//home/attaches/" + rename;
 					}
 				}
 				

@@ -11,6 +11,68 @@ $(document).ready(function() {
 	    return false;
 	});
     
+	//var counts = 1;
+	
+	/*function palyImgs(){
+		alert("123");
+		switch (counts) {
+        case 1:
+        	$(".widget table tr th .showimgs").fadeIn("slow",function(){
+        		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weibo.png");
+        	});
+        break;
+        case 2:
+        	$(".widget table tr th .showimgs").fadeIn("slow",function(){
+        		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weichat.png");
+        	});
+        break;
+        case 3:
+        	$(".widget table tr th .showimgs").fadeIn("slow",function(){
+        		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/qq.png");
+        	});
+          break;
+		}
+		counts += 1;
+	}*/
+	
+	/*setInterval(alert("123"),500);
+	setTimeout(alert("aaa"),500);*/
+	$(".widget table tr th .community a[title='weibo']").hover(
+			function () {
+				$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weibo.png");
+			},
+			function () {
+				//setInterval(palyImgs(),500);
+			}
+	);
+	$(".widget table tr th .community a[title='weichat']").hover(
+			function () {
+				$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weichat.png");
+			},
+			function () {
+				//setInterval(palyImgs(),500);
+			}
+	);
+	$(".widget table tr th .community a[title='qq']").hover(
+			function () {
+				$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/qq.png");
+			},
+			function () {
+				//setInterval(palyImgs(),500);
+			}
+	);
+	
+	$(".widget table tr th .community a[title='weibo']").click(function(){
+		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weibo.png");
+	});
+	$(".widget table tr th .community a[title='weichat']").click(function(){
+		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/weichat.png");
+	});
+	$(".widget table tr th .community a[title='qq']").click(function(){
+		$(".widget table tr th .showimgs img").attr("src","frontstageresource/img/qq.png");
+	});
+	
+	
     /**
      * 清除session值
      */
@@ -104,6 +166,30 @@ $(document).ready(function() {
             dataType: "text",
             data:{
             	aid:$.trim($(this).parent().attr('id')),
+            	},
+            success:function(data){
+            	if(data=="showok"){
+            		window.location.href="show.html";
+            	}
+            },
+            error:function(data){  
+            	window.location.href="error.html";
+            }
+    	});
+    });
+    
+    
+    /**
+     * 点击标题阅读全文
+     */
+    $(".post-title").click(function(){
+    	$.ajax({
+    		async:false,
+            type:"POST",
+            url:"showdetails.html",
+            dataType: "text",
+            data:{
+            	aid:$.trim($(this).parent().parent().attr('id')),
             	},
             success:function(data){
             	if(data=="showok"){
