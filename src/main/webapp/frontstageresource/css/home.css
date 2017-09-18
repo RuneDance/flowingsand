@@ -52,11 +52,19 @@ ul#bs-dropdownmenu li{
 }
 
 #ddm i:HOVER {
-	color: #fff;
-	background-color: #404040;
+	color: #e7e4e4;
+	background-color: #464444;
 	border: 1.19px solid #000;
 	border-radius:3px;
 }
+
+.open>#ddm i {
+    color: #fff;
+	background-color: #423c3c;
+	border: 1.19px solid #000;
+	border-radius:3px;
+}
+
 
 #u_name a span {
 	color:#FF0000;
@@ -65,20 +73,22 @@ ul#bs-dropdownmenu li{
 .dropdown-menu .divider {
 	margin: 9px 15px;
 }
-/*=======================383838======484848=======================
+/*====================================================
 	common styles
 ====================================================*/
-h2 {
-	font-size: 2.5em;
-}
-
-a {
+a#ddm {
 	color: #424141;
     outline: none;
     font-size: 16px;
 }
 
-a:hover {
+.post-meta .author a {
+	color: #424141;
+    outline: none;
+    font-size: 16px;
+}
+
+.post-meta .author a:hover {
 	color: #f4645f;
 }
 
@@ -253,6 +263,9 @@ a:active, a:focus, a img {
 }
 
 .widget table tr th .community a{
+	color: #424141;
+    outline: none;
+    font-size: 16px;
 	text-decoration: none;
 }
 

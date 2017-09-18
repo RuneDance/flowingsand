@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$(document).bind("contextmenu",function(e){
 	    return false;
 	});
-    
+	
 	//var counts = 1;
 	
 	/*function palyImgs(){
