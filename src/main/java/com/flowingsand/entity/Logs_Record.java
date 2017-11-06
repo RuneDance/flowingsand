@@ -8,8 +8,11 @@ package com.flowingsand.entity;
  */
 public class Logs_Record {
 
-	// 远程访问IP地址
+	// 远程访问IP
 	private String ip;
+
+	// 远程访问IP地址
+	private String ip_address;
 
 	// 来自identd的远程逻辑用户名 (总会返回 '-')
 	private String log_uname;
@@ -41,6 +44,14 @@ public class Logs_Record {
 
 	public void setIp(String ip) {
 		this.ip = ip;
+	}
+
+	public String getIp_address() {
+		return ip_address;
+	}
+
+	public void setIp_address(String ip_address) {
+		this.ip_address = ip_address;
 	}
 
 	public String getLog_uname() {

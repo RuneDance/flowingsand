@@ -46,8 +46,6 @@
     <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7/js/freelancer.min.js"></script>
     <!-- fileinput.min.js -->
     <script src="js/fileinput.min.js"></script>
-    <!-- zh.js -->
-    <script src="js/zh.js"></script>
 	<script type="text/javascript" src="js/test.js"></script>
 </head>
 <body>
