@@ -16,3 +16,9 @@
 - Apache 2.0
 - MySql 5.6 
 - Navicat for MySQL 11.1.11
+
+---
+
+# 技术总览：
+
+![](https://github.com/hellovvorld/imgresources/blob/master/public/technology.png)
